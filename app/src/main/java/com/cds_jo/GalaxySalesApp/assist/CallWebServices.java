@@ -104,8 +104,7 @@ public class CallWebServices  {
   // URL = "http://176.29.108.202:3756/CV.asmx";
  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
 
-        URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
-        URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
+ URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
 
  URL = "http://192.168.43.36:3750/CV.asmx";
 
