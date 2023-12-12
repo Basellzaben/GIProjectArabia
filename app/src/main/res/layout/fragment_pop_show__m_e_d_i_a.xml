@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.SuperVisor.Pop_show_MEDIA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="#A3A2A2"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_margin="5dp"
+            android:id="@+id/mediatitlelist"
+            android:background="#676767"
+            android:layout_width="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:weightSum="6"
+            android:background="#676767"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:textSize="25dp"
+                android:textColor="@color/White"
+                android:layout_margin="5dp"
+                android:layout_weight="0.05"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+            <VideoView
+                android:layout_margin="5dp"
+                android:background="@color/White"
+                android:id="@+id/VideoView"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/webview"
+
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/image"
+
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="5"
+                android:weightSum="2"
+                android:layout_height="match_parent"
+                >
+
+                <ImageButton
+                    android:padding="10dp"
+                    android:id="@+id/whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#676767"
+                    android:src="@drawable/whatsapp" />
+                <ImageButton
+                    android:padding="10dp"
+                    android:id="@+id/gmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#676767"
+                    android:src="@drawable/gmail" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

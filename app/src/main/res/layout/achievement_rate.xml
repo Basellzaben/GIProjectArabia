@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RR"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/RR1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <Methdes.MyTextView
+            android:id="@+id/ManNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="رقم المندوب"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/Man_Name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="اسم المندوب"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/Tr_Data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="16/05/2020 "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/TotalCust"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+
+        <Methdes.MyTextView
+            android:id="@+id/Visited"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/VisitPrecent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/SuccVisit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/SuccPercent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Methdes.MyTextView
+            android:id="@+id/Score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

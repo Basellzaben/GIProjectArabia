@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Methdes.MyTextView
+                    android:id="@+id/Tital"
+                    class="Methdes.MyTextView"
+                    id="@+id/view1d5"
+                    layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:text="تفاصيل طلب البيع"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="11">
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="الرقم"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="2"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="الاسم"
+                    android:textColor="#000"
+                    android:textIsSelectable="false"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_Price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="السعر"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_OldQty"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text=" كمية  المندوب"
+                    android:textColor="#000"
+                    android:textIsSelectable="false"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_Qty"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text=" كمية   المشرف"
+                    android:textColor="#000"
+                    android:textIsSelectable="false"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_OldBounce"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="بونص   المندوب"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_Bounce"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="بونص   المشرف"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <Methdes.MyTextView
+                    android:id="@+id/tv_Total"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:digits="#.000"
+                    android:gravity="center"
+                    android:text="المجموع"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+                <Methdes.MyTextView
+                    android:id="@+id/tv_Tيotal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="2"
+                    android:background="#fff"
+                    android:digits="#.000"
+                    android:gravity="center"
+                    android:text="الحالة"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/Lst1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="0"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/Green"
+                android:orientation="horizontal">
+
+                <view
+                    class="Methdes.MyTextView"
+                    id="@+id/view152"
+                    layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="التــأثــيـــــــرات"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LstHeader"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <view
+                        android:id="@+id/view20"
+                        class="Methdes.MyTextView"
+                        id="@+id/view16"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:text="نوع التأثير :"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <view
+                        android:id="@+id/tv_EffictType"
+                        class="Methdes.MyTextView"
+                        id="@+id/view15"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <view
+                        android:id="@+id/Tv_lblAmt"
+                        class="Methdes.MyTextView"
+                        id="@+id/view19"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:text="المبلغ  :"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <view
+                        android:id="@+id/tv_Amt"
+                        class="Methdes.MyTextView"
+                        id="@+id/view17"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <view
+                        android:id="@+id/Tv_lblTotalPackage"
+                        class="Methdes.MyTextView"
+                        id="@+id/vietw19"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:text="عدد مواد البكج:"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <view
+                        android:id="@+id/tv_TotalPackage"
+                        class="Methdes.MyTextView"
+                        id="@+id/vgiew17"
+                        layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_cir_white_fill_black"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/RR3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/OfferNo3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:background="@color/Main_Gray_Blure"
+                        android:gravity="center"
+                        android:text="رقم المادة"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <Methdes.MyTextView
+                        android:id="@+id/Desc3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="2"
+                        android:background="@color/Main_Gray_Blure"
+                        android:gravity="center"
+                        android:text="اسم المادة"
+                        android:textColor="#fff"
+                        android:textIsSelectable="false"
+                        android:textSize="20sp" />
+
+
+                    <Methdes.MyTextView
+                        android:id="@+id/OfferDate3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+
+                        android:layout_weight="1"
+                        android:background="@color/Main_Gray_Blure"
+                        android:gravity="center"
+                        android:text="الكمية"
+                        android:textColor="#fff"
+                        android:textIsSelectable="false"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/Lst3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Lytback"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0.2"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/Pink"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="رجـــــوع"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

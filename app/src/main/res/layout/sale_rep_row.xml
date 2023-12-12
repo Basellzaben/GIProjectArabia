@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="4"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Methdes.MyTextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:text="رقم الزياره"
+            android:textColor="@color/Black11"
+            android:textSize="19dp" />
+
+        <Methdes.MyTextView
+            android:gravity="center_horizontal"
+            android:id="@+id/wight"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="أسم العميل"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/qty"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:text="التاريخ"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

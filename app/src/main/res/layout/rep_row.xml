@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="9"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Methdes.MyTextView
+            android:id="@+id/orderNo"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="رقم الزياره"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:gravity="center_horizontal"
+            android:id="@+id/custNO"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="رقم العميل"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/CustName"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:text="اسم العميل"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/tr_Date"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="التاريخ"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/tr_Time"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:text="وقت الزياره"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="center_horizontal"
+android:layout_gravity="center_horizontal"
+          android:layout_height="match_parent">
+
+          <ImageView
+              android:id="@+id/doubleVisit"
+              android:layout_width="35dp"
+              android:gravity="center_horizontal"
+              android:layout_height="35dp"/>
+
+      </LinearLayout>
+
+        <Methdes.MyTextView
+            android:id="@+id/visitType"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="نوع الزياره"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+
+        <Methdes.MyTextView
+            android:id="@+id/visitResult"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="نتيجة الزياره"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/visitObjective"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="مواضيع الزياره"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black11"
+            android:textSize="19dp"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+    
+    
+</android.support.constraint.ConstraintLayout>

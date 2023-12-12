@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RR"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="@color/Gray1"
+    android:orientation="horizontal"
+    android:weightSum="3.25">
+
+    <Methdes.MyTextView
+        android:id="@+id/tv_ID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:text="ID"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <Methdes.MyTextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="16sp" />
+    <Methdes.MyTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/showmedis"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.25"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_media" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.25"
+        android:onClick="btn_Delete_Subject"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_delete" />
+    <ImageButton
+        android:id="@+id/imageButton145"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.25"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_edit_black_24dp" />
+
+
+
+</LinearLayout>

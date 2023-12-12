@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation" >
+    <string name="app_name"  >Galaxy App</string>
+    <string name="errorselect">يجب تحديد نوع و نتائج و اهداف الزيارة و اضافة اصناف قبل الحفظ</string>
+    <string name="Home">الرئيسية</string>
+    <string name="SearchCustomer">البحث عن العميل</string>
+    <string name="connect">Connect</string>
+    <string name="discon">DisConnect</string>
+    <string name="hint">Please input IP</string>
+    <string name="contextandcode">print context,lineAndBarCode</string>
+    <string name="read">Read Buffer</string>
+    <string name="image">Print Image</string>
+    <string name="image1">Print Raste Image</string>
+    <string name="text">Print text and cutpaper</string>
+    <array name="Main_Item3">
+
+        <item>تقرير طلبات البيع</item>
+        <item>اخر فاتورة</item>
+        <item>تقرير الباتش</item>
+        <item>حفظ موقع العميل</item>
+        <item>اللغة العربية</item>
+
+
+        <item>خروج</item>
+        <item>مجموعة المجرة الدولية V1</item>
+    </array>
+    <string name="bleselect">Please select BLE dev</string>
+    <string name="usbselect">Please select USB dev</string>
+    <string name="toast_discon_success">Disconnect success</string>
+    <string name="toast_discon_faile">Disconnect success</string>
+    <string name="toast_present_con">there is no connection</string>
+    <string name="send_success">Send Success</string>
+    <string name="send_failed">Send Failed</string>
+    <string name="not_con_printer">there is no connection</string>
+    <string name="usb_pre_con">present connected Usb dev:</string>
+    <string name="con_success">Connect success</string>
+    <string name="con_failed">Connect failed</string>
+    <string name="con_has_discon">connection has disconnected</string>
+    <string name="sb">Select</string>
+    <string name="start_pos_activity">Start PosPrint</string>
+    <string name="start_76_activity">Start 76 PosPrint</string>
+    <string name="start_tsc_activity">Start TSC PosPrint</string>
+    <string name="qrcode">Print QRcode</string>
+    <string name="none_ble_device">no devices are found</string>
+    <string name="none_ipaddress">pleesa input the ipaddress first!</string>
+    <string name="connect_first">please connet the printer first!</string>
+    <string name="this_is_text">This is Text!</string>
+    <string name="text_for">text for!</string>
+    <string name="error_level">error_level</string>
+    <string name="qrcode_content">input content，create QRCode</string>
+    <string name="qrcode_clear">clear</string>
+    <string name="qrcode_creat">creat</string>
+    <string name="qrcode_print">print</string>
+    <string name="qrcode_scan">scan</string>
+    <string name="none_content">please input content first！</string>
+    <string name="check_linke">checkLink</string>
+    <string name="net_connet_loss">network connect loss,please go back and connet the printer again</string>
+    <string name="self_check">self check</string>
+    <!-- Bluetooth -->
+    <!--  Button -->
+    <string name="bt_search_btn">البحث عن اجهزة بلوتوث</string>
+    <string name="bt_stop_search_btn">"Stop Searching Bluetooth Devices"</string>
+    <!--  Tab -->
+    <string name="bt_tab">Bluetooth</string>
+    <!--  Message -->
+    <string name="bt_disconn_msg">"Bluetooth Disconnected"</string>
+    <string name="bt_conn_msg">"Bluetooth Connected"</string>
+    <string name="bt_conn_fail_msg">"Bluetooth Connection Failed"</string>
+    <string name="bt_notconn_msg">"Bluetooth not connected."</string>
+
+    <!-- Common -->
+    <!--  Button -->
+    <string name="dev_conn_btn">"Connect"</string>
+    <string name="dev_disconn_btn">"Disconnect"</string>
+    <!-- Message -->
+    <string name="connecting_msg">"Connecting"</string>
+    <string name="dev_check_msg">"Check the device status or settings."</string>
+
+    <!-- Wi-Fi -->
+    <!--  Tab -->
+    <string name="language">language </string>
+
+    <string name="wifi_tab">"Wi-Fi"</string>
+    <!--  Message -->
+    <string name="wifi_disconn_msg">"Wi-Fi Disconnected"</string>
+    <string name="wifi_conn_msg">"Wi-Fi Connected"</string>
+    <string name="wifi_conn_fail_msg">"Wi-Fi Connection Failed"</string>
+    <string name="wifi_notconn_msg">"Wi-Fi not connected."</string>
+
+    <string name="print">"اسم العميل : فراس محمد سلمان "</string>
+    <string name="scan">Scan</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_master">MasterActivity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="re">الإجمالي</string>
+
+
+    - <!--  PrintActivity resources
+  -->
+
+    <string name="sign">Sign</string>
+    <string name="ProgressStatus">Progress and Status</string>
+    <string name="enter_printer_id">Enter a Printer ID</string>
+    <string name="enter_mac_address">Enter a MAC address</string>
+    <string name="enter_opt_text">Enter optional text to print</string>
+    <string name="signature_imageview_desc">Signature image</string>
+    - <!--  CaptureSignatureActivity resources
+  -->
+    <string name="title_activity_capture_signature">CaptureSignatureActivity</string>
+    <string name="sign_below">Sign below</string>
+    <string name="button_save">Save</string>
+    <string name="button_clear">Clear</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="h">h</string>
+    <string name="new_message_notification_title_template">New message: %1$s</string>
+
+
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="new_message_notification_placeholder_text_template">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+    <string name="about">البحث عن تحديثات</string>
+
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="title_activity_new_maps">Map</string>
+
+    <string name="msg_notification_title_template">Msg: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="msg_notification_placeholder_text_template">You said %1$s and lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel semper
+        venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis. Pellentesque
+        vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper ornare lacus. Duis
+        ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis viverra rhoncus sit amet
+        nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec tortor.
+    </string>
+    <string name="tot">0.000</string>
+    <string name="title_activity_galaxy_login">Sign in</string>
+    <string name="User_Name">اسم المستخدم</string>
+    <string name="Password">كلمة المرور</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Main_Page"> الرئيسية</string>
+    <string name="New">جديد</string>
+    <string name="Save">حفظ</string>
+    <string name="Print">طباعة</string>
+    <string name="Delete">حذف</string>
+    <string name="Post">اعتماد</string>
+
+    <string name="Postvist">اعتماد الزيارات</string>
+    <string name="nonpostevisits">لا توجد زيارات مغلقة غير مرحلة</string>
+    <string name="nonposteno">لا توجد زيارات  غير مرحلة</string>
+
+    <string name="nonpostereceipts"> لا يوجد سندات قبض غير مرحلة</string>
+
+    <string name="nonposteh">لا توجد حركات  غير مرحلة</string>
+    <string name="currency">العملة</string>
+
+
+
+    <string name="Clint_Nane">اسم العميل</string>
+    <string name="Order_ID">رقم الطلب</string>
+    <string name="Client_ID">رقم العميل</string>
+    <string name="Location">المنطقة</string>
+    <string name="Add_item">اضافة مواد</string>
+    <string name="item_no">رقم المادة</string>
+    <string name="Item_Name">اسم المادة</string>
+    <string name="Price">السعر</string>
+    <string name="Quentity">الكمية</string>
+    <string name="Unit">الوحدة</string>
+    <string name="Tax">الضريبة</string>
+    <string name="T_Tax">قيمة الضريبة</string>
+    <string name="Bounes">البونص</string>
+    <string name="Dics">الخصم</string>
+    <string name="Total">المجموع</string>
+    <string name="Total_Tax">مجموع الضريبة</string>
+    <string name="Net_Total">الاجمالي</string>
+    <string name="Order_Item">طلب بيع</string>
+    <string name="Order_Search"> البحث عن طلب البيع</string>
+    <string name="Add_Item1">اضافة مادة</string>
+    <string name="Add">اضافة</string>
+
+    <string name="addappointment">اضافة موعد</string>
+
+    <string name="visiteerrorinformation">معلومات الزيارة غير مكتملة</string>
+
+
+
+    <string name="Cancle">الغاء</string>
+    <string name="Acc_Report">كشف حساب</string>
+    <string name="From_Date">من تاريخ</string>
+    <string name="Account_Num">رقم الحساب</string>
+    <string name="To_Date">الى تاريخ</string>
+    <string name="Chech_Acc">رصيد الشيك</string>
+    <string name="Clint_balance">رصيد العميل</string>
+    <string name="Max_Balance">سقف التسهيل</string>
+    <string name="Net_Balance">رصيد نهائي</string>
+    <string name="Search_Customer">البحث عن عميل</string>
+    <string name="Sale_invoice">فاتورة المبيعات</string>
+    <string name="Catch_Receipt">سند قبض</string>
+    <string name="Serial_Number">رقم التسلسل</string>
+    <string name="total_cash">مجموع القبض</string>
+    <string name="cash_type">نوع القبض</string>
+    <string name="account_name">اسم الحساب</string>
+    <string name="cash_amount">المبلغ النقدي</string>
+    <string name="notes">ملاحظات</string>
+    <string name="checks_amount">مجموع الشكات</string>
+    <string name="date">التاريخ</string>
+
+    <string name="Copying">العمل جار على نسخ البيانات الرجاء الانتظار</string>
+
+
+
+    <string name="coin_type">نوع العملة</string>
+    <string name="add_recv">اضافة سند قبض</string>
+    <string name="update_info">تحديث البيانات</string>
+    <string name="Man_Summery">الملخص اليومي</string>
+    <string name="Sales_invoic">فواتير مبيعات</string>
+    <string name="T2">سندات قبض</string>
+    <string name="T3">طلبات البيع</string>
+    <string name="T4">رمز التحقق</string>
+    <string name="T5">الحركات الغير مرحلة</string>
+    <string name="Man_Balance">تسوية الجرد</string>
+    <string name="Number_Of_Item">عدد المواد</string>
+
+    <string name="Representative">مندوب</string>
+
+
+    <string name="Trans_Q_Report">كشف جرد كميات المندوب</string>
+    <string name="Retrive_Data">استرجاع المعلومات</string>
+    <string name="View_Item_Cost">استعلام عن كلفة مادة</string>
+    <string name="Search_Item">البحث عن مادة</string>
+    <string name="Day">اليوم</string>
+    <string name="Visit_List">جدول الزيارات</string>
+    <string name="Gallary_Item">استعراض المواد</string>
+    <string name="FromStroe">من مستودع</string>
+    <string name="ToStore">إلى مستودع</string>
+    <string name="OrderNo">رقم المستند</string>
+    <string name="TransQty">سند نقل مواد</string>
+    <string name="ItemCount">عدد  المواد</string>
+    <string name="Logout">خروج</string>
+    <string name="EnterUserName">الرجاء ادخال اسم المستخدم!</string>
+    <string name="EnterPassword">الرجاء ادخال كلمة المرور !</string>
+    <string name="DisAmt">قيمة الخصم</string>
+
+
+
+    <string name="Disnubbmer">Value</string>
+    <string name="disPrec">الخصم نسبة</string>
+    <string name="promotion">العروض</string>
+    <string name="EnterValue">الرجاء ادخال قيمة</string>
+    <string name="ItemExists">خروج</string>
+    <string name="Ok">موافق</string>
+    <string name="Ordersales">طلب البيع</string>
+    <string name="AddCompleteSucc">تمت عملية الحفظ بنجاح</string>
+    <string name="storeqty">كمية المستودع</string>
+    <string name="OrderPrecent">نسبة الكمية</string>
+    <string name="InvoiceType">نوع الفاتورة</string>
+    <string name="CasInvoice">نقدي</string>
+    <string name="GetData">استرجاع</string>
+    <string name="addCheck">اضافة الشيكات</string>
+    <string name="CheckNo">رقم الشيك</string>
+    <string name="Amt">المبلغ</string>
+    <string name="BankNm">اسم البنك</string>
+    <string name="CheckTotal">مبلغ الشيكات</string>
+    <string name="CheckCount">عدد الشيكات</string>
+    <string name="Excellent">ممتاز</string>
+    <string name="Medium">متوسط</string>
+    <string name="good">جيد</string>
+    <string name="Question">السؤال</string>
+    <string name="Answer">الجواب</string>
+    <string name="number">الرقم</string>
+    <string name="CustomerQuantity">جرد كميات العميل</string>
+    <string name="Hidden">اخفاء</string>
+    <string name="Unpost">الغاء الاعتماد</string>
+    <string name="TarnsFromServer">سحب البيانات من السيرفر</string>
+    <string name="PostTransAction">اعتماد الحركات</string>
+    <string name="UpdatData">تحديث المعلومات</string>
+    <string name="Customers">العملاء</string>
+    <string name="Banks">البنوك</string>
+    <string name="Items">المواد</string>
+
+    <string name="Factors">معامل التحويل</string>
+    <string name="Currency">العملات</string>
+    <string name="TransferQnty">سند التزويد</string>
+    <string name="Users">المستخدمين</string>
+    <string name="ItemsCat">اصناف المواد</string>
+    <string name="Cash">نقدي</string>
+    <string name="interneterror">يرجى التاكد من الاتصال بالانترنت</string>
+
+
+
+    <string name="CashCustomer">العملاء النقديين</string>
+    <string name="CompanyInfo">معلومات المؤسسة</string>
+    <string name="Codes">رموز التحقق</string>
+    <string name="CustomerPrice">اخر سعر بيع للعميل</string>
+    <string name="PriceCat">فئات الاسعار</string>
+    <string name="Qty_Supply">الكمية المزودة</string>
+    <string name="QtySoled">الكمية المباعة</string>
+    <string name="StoreQty">كمية المستودع</string>
+    <string name="ActQty">الكمية المباعة</string>
+    <string name="Diff">الفرق</string>
+    <string name="questionnaire">استبيان</string>
+    <string name="InvoiceNo">رقم الفاتورة</string>
+    <string name="invoiceStates">حالة الفاتورة</string>
+    <string name="InvoiceCount">عدد الفواتير</string>
+    <string name="time">الوقت</string>
+    <string name="states">الحالة</string>
+    <string name="OrderType">نوع السند</string>
+    <string name="Count">العدد</string>
+    <string name="VisiMangemnet">فتح الزيارة</string>
+    <string name="fromTime">وقت البداية</string>
+    <string name="ToTime">نهاية الوقت</string>
+    <string name="lat">x</string>
+    <string name="samples">العينات</string>
+
+
+
+
+    <string name="Longitude">Y</string>
+    <string name="barcode">باركود</string>
+    <string name="VisitDuration">مدة الزيارة</string>
+    <string name="SaveLocation">حفظ موقع عميل</string>
+    <string name="openBarCode">قراءة الباركود</string>
+    <string name="UpdateLocation">تحديث الموقع</string>
+    <string name="Address">العنوان</string>
+    <string name="StartVisit">بداية الجولة</string>
+    <string name="EndVisit">نهاية الجولة</string>
+    <string name="EditeTransactios">Edite Transactios</string>
+    <string name="LocationNotfound">"الموقع غير متوفر"</string>
+    <string name="StartVisitSucc">عملية بداية الجولة تمت بنجاح</string>
+    <string name="StartVisitNotSucc">عملية بداية الجولة لم تتم بنجاح</string>
+    <string name="EndVisitSucc">عملية نهاية الجولة تمت بنجاح</string>
+    <string name="EndVisitNotSucc"> عملية نهاية الجولة لم تتم ،الرجاء التاكد  من وجود جولة مفتوحة</string>
+    <string name="DoYouWantToContinSave">هل تريد الاستمرار في عملية الحفظ</string>
+    <string name="UpdateNotAllowed">لا يمكن التعديل على الملف</string>
+    <string name="DoYouWantContinDelete">هل تريد الاستمرار في عملية الحذف</string>
+    <string name="DeleteCompleteSuccsully">تمت عملية الحذف بنجاح</string>
+    <string name="No">لا</string>
+
+    <string name="Pleaseselectadate">الرجاء تحديد التاريخ</string>
+    <string name="Pleasewait">الرجاء الانتظار</string>
+
+    <string name="postprogres">جار تنفيذ عملية الاعتماد</string>
+    <string name="fetchinginformationerror">خطأ في استرجاع الوقت</string>
+
+
+
+    <string name="WhatsApperror" >تطبيق الواتساب غير موجود</string>
+
+
+    <string name="Connect" >اتصال</string>
+    <string name="Image" >صورة</string>
+
+    <string name="ConnectError"> فشل في عملية الاتصال</string>
+    <string name="PostNotCompleteSuccfully">عملية الاعتماد لم تتم بنجاح</string>
+    <string name="PostCompleteSuccfully">عملية الاعتماد تمت بنجاح</string>
+    <string name="PostCompleteSuccfully2">عملية الاعتماد تمت بنجاح وسيتم اغلاق الزيارة</string>
+    <string name="PleaseWait">الرجاء الانتظار</string>
+    <string name="PostUnderProccess">جاري العمل على اعتماد الطلب</string>
+    <string name="SaveNotAllowedWithoutItem">لا يمكن الحفظ بدون مواد</string>
+    <string name="Arabic">العربية</string>
+    <string name="English">الانجليزية</string>
+    <string name="ManNm">اسم المندوب</string>
+    <string name="Signature">التوقيع</string>
+    <string name="Retrive_DataUnderProcess">العمل جاري على استرجاع البيانات</string>
+    <string name="Retrive_DataCompleteSucc"> تمت عملية استرجاع البيانات بنجاح</string>
+    <string name="NoData">لا يوجد بيانات</string>
+    <string name="PleaseCheckDate">الرجاء التاكد من التاريخ</string>
+    <string name="Credit">دائن</string>
+    <string name="Debt">مدين</string>
+    <string name="Balance">الرصيد</string>
+    <string name="Beginning_balance">رصيد بداية مدة</string>
+    <string name="description">الوصف</string>
+    <string name="DocType">نوع المستند</string>
+    <string name="DocNo">رقم المستند</string>
+    <string name="CurrencyValue">العملة المقابلة</string>
+    <string name="Checks">شيكات </string>
+    <string name="CashAndChecks"> نقدي + شيكات </string>
+    <string name="AddNotCompleteSucc">  عملية الحفظ  لم تتم بنجاح</string>
+    <string name="DeleteNotCompleteSuccsully">  عملية الحذف لم تتم بنجاح</string>
+    <string name="QtyNotAvalable">الكمية غير متاحة </string>
+    <string name="DeleteNotAllowed">لا يمكن الحذف</string>
+    <string name="Sale_invoiceSearch">البحث في فواتير المبيعات</string>
+    <string name="Update">تعديل</string>
+    <string name="SearchHere">ابحث هنا</string>
+    <string name="setting">اعدادات</string>
+
+    <string name="monthlypost">اعتماد الخطة الشهرية</string>
+    <string name="loginerror">معلومات الدخول غير صحيحة</string>
+
+
+
+    <string name="ReturnQty">ارجاع المواد</string>
+    <string name="DeviceType">نوع الجهاز</string>
+    <string name="PrinterType">نوع الطابعة</string>
+    <string name="Doctorvisit">تقرير عينات</string>
+    <string name="frommonth">بداية شهر</string>
+    <string name="yearfrom">بداية سنه</string>
+    <string name="CountryReport">تقرير المبيعات</string>
+    <string name="CountryNm">اسم المنطقة</string>
+    <string name="manNo">رقم المندوب</string>
+    <string name="LocationSearch">البحث في المناطق</string>
+    <string name="LocationNo">رقم المنطقة</string>
+    <string name="LocationNm">اسم المنطقة</string>
+    <string name="ManSearch">البحث عن المندوبيين</string>
+    <string name="ManvisitReport">تقرير زيارة المندوب</string>
+    <string name="Batch">الباتش</string>
+    <string name="Expdate">تاريخ الصلاحية</string>
+    <string name="PhrStatus">حالة الصيدلية</string>
+    <string name="Active">فعالة</string>
+    <string name="back">رجوع</string>
+    <string name="errorup">حدث خطأ اثناء البحث عن التحديثات , يرجى المحاولة لاحقا</string>
+
+    <string name="ok">موافق</string>
+
+
+    <string name="Time">الوقت </string>
+    <string name="Duration">المدة </string>
+    <string name="Visitinginformation">بيانات الزيارة</string>
+
+    <string name="postCompleteSucc">تمت عملية الترحيل بنجاح</string>
+
+    <string name="postCompleteerr">لم تنم عملية الترحيل </string>
+    <string name="Deletepostedvisits">حذف الزيارات المعتمدة </string>
+
+
+    <string name="round">الجولات</string>
+    <string name="medical_clinics">العيادات الطبية</string>
+    <string name="attachments">المرفقات</string>
+    <string name="Updating_data">تحديث البيانات </string>
+    <string name="Monthly_plan"> الخطة الشهرية</string>
+    <string name="delegate_summary">ملخص المندوب</string>
+    <string name="Medical_Clinics_Report">تقرير العيادات الطبي</string>
+    <string name="Medical_Sales_System">نظام المبيعات الطبي 1.1</string>
+    <string name="day">اليوم</string>
+    <string name="open_visit">فتح الزيارة</string>
+    <string name="Beginnin_end_of_the_visit">بداية-نهاية الزيارة</string>
+    <string name="Area">المنطقة</string>
+    <string name="Clinicname">اسم العيادة</string>
+    <string name="ClinicNO">رقم العيادة</string>
+    <string name="visitform">نموذج الزيارة</string>
+    <string name="Thereisanopenvisit">يوجد زيارة مفتوحة</string>
+
+    <string name="updateusers">نسخ المستخدمين</string>
+
+
+
+    <string name="Subjects">المواضيع</string>
+    <string name="Summary">الملخص</string>
+    <string name="Visitsummary">ملخص الزيارة</string>
+    <string name="withsupervisor">مع مشرف</string>
+
+    <string name="medicaladvertising">الدعاية الطبية</string>
+    <string name="Close_the_visit">اغلاق الزيارة</string>
+    <string name="endofround">نهاية الجولة</string>
+
+    <string name="vist_Number">رقم الزيارة</string>
+    <string name="freesamples">العينات المجانية</string>
+
+    <string name="Itemsdiscussed">الاصناف التي تم مناقشتها</string>
+
+    <string name="customerrating">تصنيف العميل</string>
+    <string name="visittype">نوع الزيارة</string>
+    <string name="Objectivesofvisit">اهداف الزيارة</string>
+
+
+    <string name="gifts">الهدايا</string>
+
+
+
+   <!-- <string name="searchformaterial">البحث عن مادة</string>-->
+    <string name="AvailableQuantity">الكمية المتاحة</string>
+
+    <string name="Theratio">النسبة</string>
+    <string name="Doctorsvisits">زيارات الاطباء</string>
+
+    <string name="doctornumber">رقم الطبيب</string>
+    <string name="doctorname">اسم الطبيب</string>
+    <string name="Doctors">الاطباء</string>
+
+    <string name="starttime">وقت البداية</string>
+
+    <string name="endtime">وقت النهاية</string>
+    <string name="Status">الحالة</string>
+    <string name="deletevisits">حذف الزيارات</string>
+    <string name="processing">المعالجة</string>
+    <string name="specialization">الاختصاص</string>
+    <string name="thedoctors">الاطباء</string>
+    <string name="dateandtime">التاريخ والوقت</string>
+    <string name="sequences">االتسلسلات</string>
+    <string name="area">المناطق</string>
+    <string name="themonth">الشهر</string>
+
+    <string name="sequencesupdate">تحديث االتسلسلات</string>
+    <string name="deleteAll">ذف جميع البيانات</string>
+
+
+    <string name="theyear">السنة</string>
+    <string name="medicalvisits">الزيارات الطبية</string>
+    <string name="Visits">الزيارات</string>
+    <string name="MaterialConversionTransactions">معاملات النحويل للمواد</string>
+
+    <string name="Pleaseselectaitem">الرجاء اختيار مادة</string>
+    <string name="UpdateNotAllowedafterpost">لا يمكن التعديل بعد الاعتماد</string>
+
+    <string name="saveandpost">لا يمكن الاعتماد قبل التخزين</string>
+
+    <string name="nonpost">غير معتمد</string>
+    <string name="all">الكل</string>
+
+
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+
+
+    <string name="notentered">غير مدخلة</string>
+    <string name="entered">مدخلة</string>
+
+    <string name="openedsuccessfully">عملية بداية الجولة تمت بنجاح</string>
+    <string name="mustselectkey">يجب اختيار key قبل اضافة الصنف</string>
+
+    <string name="erroe">لم يتم بنجاح </string>
+    <string name="month">الشهر </string>
+
+    <string name="Updated"> تحديث </string>
+    <string name="successfully">تم بنجاح</string>
+    <string name="New_Search">بحث جديد </string>
+
+    <string name="Sunday">الاحد </string>
+    <string name="Monday">الاثنين </string>
+    <string name="Tuesday">الثلاثاء </string>
+    <string name="Wednesday">الاربعاء </string>
+    <string name="Thursday">الخميس </string>
+    <string name="Saturday">السبت </string>
+    <string name="Friday">الجمعة </string>
+
+
+
+
+    <string name="evening">مسائية</string>
+    <string name="morning">صباحية</string>
+
+    <string name="Planday">تفاصيل الخطة خلال يوم</string>
+    <string name="Planday30">تفاصيل الخطة خلال 30 يوم</string>
+    <string name="sendtoadmin">ارسال الى المشرف</string>
+    <string name="vacation">اجازة</string>
+    <string name="Officialholiday">عطلة رسمية</string>
+
+    <string name="addareas">اضافة مناطق</string>
+    <string name="diverse">متفرقات</string>
+    <string name="collecting">تحصيل</string>
+    <string name="MedicalReport">تقرير العيادات الطبية</string>
+    <string name="Clinicdoctorname">اسم العيادة/الطبيب</string>
+    <string name="visitdone">تقرير الزيارات المنجزة</string>
+
+
+    <string name="alreadyadded">الصنف مضاف من قبل</string>
+    <string name="searchformaterial">البحث عن مادة</string>
+    <string name="deleteconf">هل انت متاكد من عملية الحذف ..؟</string>
+    <string name="resultofthevisit">نتيجة الزيارة</string>
+    <string name="deleteerror">عملية الحذف لم تتم بنجاح</string>
+
+    <string name="deleteone">عملية الحذف تمت بنجاح</string>
+
+
+    <string name="week">الاسابيع</string>
+    <string name="dayes">الايام</string>
+
+
+    <string name="week1">الاسبوع</string>
+
+    <string name="lastupdate"> اخر تحديث :</string>
+
+
+    <string name="postmediacalvist">اعتماد زيارة طبية</string>
+    <string name="Returnrequest">طلب مرتجع</string>
+
+
+    <string name="add">أضافة</string>
+    <string name="posted">مرحلة</string>
+    <string name="nonposted">غير مرحلة</string>
+
+    <array name="Main_Item1">
+        <item>مردودات المبيعات</item>
+        <item>طلب المواد</item>
+        <item>نقل مواد</item>
+        <item>بطاقة العميل</item>
+        <item>حفظ موقع العميل</item>
+        <item>بيانات العميل</item>
+        <item>جرد كميات العميل</item>
+        <item>ملاحظات العميل</item>
+        <item>اضافة الصور</item>
+        <item>كميات المندوب</item>
+        <item>المواد التالفة</item>
+        <item>الهدف الشهري</item>
+        <item>جدول التحصيلات</item>
+        <item>كود السقوفات</item>
+        <item>بطاقة المندوب</item>
+        <item>طلب اجازة</item>
+        <item>الدوام</item>
+        <item>Gps</item>
+        <item>استعراض العروض</item>
+        <item>نظام الويب</item>
+        <item>تقارير المشرف</item>
+        <item>اللغة العربية</item>
+        <item>الاعدادات النظام</item>
+
+        <item>تقرير فواتير البيع</item>
+        <item>مواقع العملاء</item>
+
+        <item>خروج</item>
+    </array>
+    <array name="Main_Item2">
+        <item>تقرير العيادات الطبي</item>
+        <item>تقرير الزيارات المنجزة</item>
+
+        <item>English language</item>
+        <item>خروج</item>
+
+    </array>
+    <string name="PrepareQty">Deed of Transfer </string>
+    <string name="itemssellingunits">Items selling units</string>
+    <string name="medicalreport">Medical Clinics Report</string>
+  <!--  <array name="Main_Item">
+        <item>كشف حساب</item>&#45;&#45;0
+        <item>فتح زيارة</item>&#45;&#45;1
+        <item>متابعة المندوبيين</item>&#45;&#45;3
+        <item>فاتورة مبيعات</item>&#45;&#45;3
+        <item>سند قبض</item>&#45;&#45;4
+        <item>طلب بيع</item>&#45;&#45;5
+        <item>استعراض الكميات</item>&#45;&#45;6
+        <item>تحديث البيانات</item>&#45;&#45;7
+        <item>كلف المواد</item>&#45;&#45;8
+        <item>جدول الزيارات</item>&#45;&#45;9
+        <item>جرد كميات العميل</item>&#45;&#45;10
+        <item>استبيان</item>&#45;&#45;11
+        <item>ارجاع مواد</item>&#45;&#45;12
+        <item>اعدادات عامة</item>&#45;&#45;13
+        <item>طلب تجهيز</item>&#45;&#45;14
+        <item>تعديل الحركات</item>&#45;&#45;15
+        <item>تسوية الجرد</item>&#45;&#45;16
+        <item>استعراض المواد</item>&#45;&#45;17
+
+        <item>تقرير المبيعات</item>&#45;&#45;18
+        <item>تقرير الزيارات</item>&#45;&#45;19
+        <item>الخطة الشهرية</item>&#45;&#45;20
+        <item>إرجاع المواد</item>&#45;&#45;21
+        <item>خروج</item>&#45;&#45;22
+        <item>مجموعة المجرة الدولية V1</item>&#45;&#45;23
+    </array>
+-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+
+
+
+
+    <string name="Location_Coordinates1">احداثيات الموقع 1</string>
+    <string name="Location_Coordinates2">احداثيات الموقع 2</string>
+    <string name="Area_Name">أسم المنظقة</string>
+    <string name="Barcode">الباركود</string>
+    <string name="Update_Location">تحديث الموقع</string>
+    <string name="Barcode_Reading">قراءة الباركود</string>
+    <string name="Duration_Visit">مدة الزياره</string>
+    <string name="Search_by_range">البحث من خلال المسافه</string>
+    <string name="exceptional">جولة استثائية</string>
+    <string name="startvisitcustomer">بداية زيارة العميل </string>
+    <string name="itinerary">خط السير</string>
+    <string name="week6">الاسبوع</string>
+    <string name="Galaxy">المجرة الدولية</string>
+    <string name="dontsave">عمليةالحفظ لم تتم</string>
+    <string name="notopenvivit">لا يمكن فتح زيارة لوجودك خارج مجال العميل</string>
+    <string name="PerLocation">التأكد من صلاحيات الموقع</string>
+    <string name="addImagemsg">لا يمكن إنهاء الجولة دون اخذ صور</string>
+    <string name="takeCustNotesMsg">الرجاء تبليغ العميل بالملاحظات التالية</string>
+    <string name="receipt_voucher">سند القبض</string>
+    <string name="sales_bill">فاتورة مبيعات</string>
+    <string name="sales_revenue">مردود مبيعات</string>
+    <string name="Customer_Status_Canceled">حالة العميل : ملغي</string>
+    <string name="Customer_Status_Open">حالة العميل : مفتوح</string>
+    <string name="Customer_Status_Suspended">حالة العميل : موقوف</string>
+    <string name="Customer_Status_Pending">حالة العميل : معلق</string>
+    <string name="Supervisor_approval_request">طلب موافقة المشرف</string>
+    <string name="Verification_Code">رمز تحقق</string>
+    <string name="Excluded_from_offers">مستثنى من العروض</string>
+    <string name="tax_exempt">معفي الضريبة</string>
+    <string name="customer_type">نوع العميل</string>
+    <string name="receivable">ذمم</string>
+    <string name="CustmerMsg">هذا العميل موقوف ، يرجى مراجعة الدائرة المالية</string>
+    <string name="plan">حسب خطة</string>
+    <string name="outplan">خارج خطة</string>
+</resources>

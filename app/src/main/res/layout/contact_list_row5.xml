@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Gray1"
+    android:orientation="horizontal">
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/CHXSPrice"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="@color/White"/>
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:onClick="btn_Delete_Item"
+        android:scaleType="fitXY"
+        android:src="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/tv_Total"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:digits="#.000"
+        android:gravity="center"
+        android:text="Total"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+
+
+    <TextView
+        android:id="@+id/tv_Tax_Amt"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="Tax_Amt"
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_Tax"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="TAX"
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_Price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/tv_Bounce"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="Bounce"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_Qty"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="Qty"
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1.9"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0.5dp"
+        android:layout_weight="1.3"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="no"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

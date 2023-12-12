@@ -1,0 +1,715 @@
+<resources>
+    <string name="app_name">Galaxy App</string>
+
+    <string name="errorselect">The type, results and objectives of the visit must be determined and items added before saving</string>
+    <string name="Home">HOME </string>
+    <string name="SearchCustomer">Search Customer</string>
+    <string name="resultofthevisit">Result of Visit</string>
+    <string name="searchformaterial">Search for material</string>
+    <string name="Returnrequest">Return Request</string>
+
+    <array name="Main_Item1">
+        <item>Sales Returns</item>
+        <item>Material Request</item>
+        <item>Trans Store</item>
+        <item>Customer Card</item>
+        <item>Save Customer Location</item>
+        <item>Customer Information</item>
+        <item>Customer Quantity Inventory</item>
+        <item>Customer Notes</item>
+        <item>Add Photos</item>
+        <item>Representative Quantities</item>
+        <item>Item Dameged</item>
+        <item>Monthly Target</item>
+        <item>Collections Table</item>
+        <item>Ceiling Code</item>
+        <item>Representative Card</item>
+        <item>Vacation Request</item>
+        <item>Work Hours</item>
+        <item>Gps</item>
+        <item>Show Offers</item>
+        <item>Web System</item>
+        <item>Admin Reports</item>
+        <item>English language</item>
+        <item>Settings</item>
+        <item>Sales Invoices Report</item>
+        <item>Customers Locations</item>
+        <item>Exit</item>
+    </array>
+    <array name="Main_Item2">
+        <item>Clinics Medical Report</item>
+        <item>Completed visits report</item>
+        <item>اللغة العربية</item>
+
+
+        <item>Exit</item>
+
+    </array>
+
+    <string-array name="port">
+        <item>NET</item>
+        <item>BLE</item>
+        <item>USB</item>
+    </string-array>
+    <string-array name="error_level">
+        <item>7%</item>
+        <item>15%</item>
+        <item>25%</item>
+        <item>30%</item>
+    </string-array>
+
+
+    <string name="language">Language </string>
+
+    <string name="bt_search_btn">Search Bluetooth Devices </string>
+    <string name="bt_stop_search_btn">"Stop Searching Bluetooth Devices" </string>
+    <!--  Tab -->
+    <string name="bt_tab">Bluetooth </string>
+    <!--  Message -->
+    <string name="bt_disconn_msg">"Bluetooth Disconnected" </string>
+    <string name="bt_conn_msg">"Bluetooth Connected" </string>
+    <string name="bt_conn_fail_msg">"Bluetooth Connection Failed" </string>
+    <string name="bt_notconn_msg">"Bluetooth not connected." </string>
+
+    <!-- Common -->
+    <!--  Button -->
+    <string name="dev_conn_btn">"Connect" </string>
+    <string name="dev_disconn_btn">"Disconnect" </string>
+    <!-- Message -->
+    <string name="connecting_msg">"Connecting" </string>
+    <string name="dev_check_msg">"Check the device status or settings." </string>
+    <string name="week1">Week</string>
+    <string name="lastupdate">last Update :</string>
+
+    <!-- Wi-Fi -->
+    <!--  Tab -->
+    <string name="wifi_tab">"Wi-Fi" </string>
+    <!--  Message -->
+    <string name="wifi_disconn_msg">"Wi-Fi Disconnected" </string>
+    <string name="wifi_conn_msg">"Wi-Fi Connected" </string>
+    <string name="wifi_conn_fail_msg">"Wi-Fi Connection Failed" </string>
+    <string name="wifi_notconn_msg">"Wi-Fi not connected." </string>
+
+    <string name="print">"اسم العميل : فراس محمد سلمان " </string>
+    <string name="scan">Scan </string>
+    <string name="title_activity_main2">Main2Activity </string>
+    <string name="title_activity_login">Sign in </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email </string>
+    <string name="prompt_password">Password (optional) </string>
+    <string name="action_sign_in">Sign in or register </string>
+    <string name="action_sign_in_short">Sign in </string>
+    <string name="error_invalid_email">This email address is invalid </string>
+    <string name="error_invalid_password">This password is too short </string>
+    <string name="error_incorrect_password">This password is incorrect </string>
+    <string name="error_field_required">This field is required </string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+    completions."
+     </string>
+    <string name="title_activity_master">MasterActivity </string>
+    <string name="title_item_list">Items </string>
+    <string name="title_item_detail">Item Detail </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer </string>
+    <string name="navigation_drawer_close">Close navigation drawer </string>
+
+    <string name="action_settings">Settings </string>
+    <string name="re">الإجمالي </string>
+
+
+    - <!--  PrintActivity resources
+  -->
+
+    <string name="sign">Sign </string>
+    <string name="ProgressStatus">Progress and Status </string>
+    <string name="enter_printer_id">Enter a Printer ID </string>
+    <string name="enter_mac_address">Enter a MAC address </string>
+    <string name="enter_opt_text">Enter optional text to print </string>
+    <string name="signature_imageview_desc">Signature image </string>
+    - <!--  CaptureSignatureActivity resources
+  -->
+    <string name="title_activity_capture_signature">CaptureSignatureActivity </string>
+    <string name="sign_below">Sign below </string>
+    <string name="button_save">Save </string>
+    <string name="button_clear">Clear </string>
+    <string name="button_cancel">Cancel </string>
+    <string name="h">h</string>
+
+    <string name="new_message_notification_title_template">New message: %1$s </string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="new_message_notification_placeholder_text_template">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+     </string>
+
+    <string name="about">Update</string>
+    <string name="action_share">Share </string>
+    <string name="action_reply">Reply </string>
+    <string name="title_activity_maps">Map </string>
+    <string name="title_activity_google_maps">Map </string>
+    <string name="title_activity_new_maps">Map </string>
+    <string name="Clinicdoctorname">Clinic/Doctors Name</string>
+    <string name="add">add</string>
+    <string name="medicalvisits">Medical Visits</string>
+
+    <string name="msg_notification_title_template">Msg: %1$s </string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="msg_notification_placeholder_text_template">You said %1$s and lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel semper
+        venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis. Pellentesque
+        vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper ornare lacus. Duis
+        ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis viverra rhoncus sit amet
+        nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec tortor.
+     </string>
+    <string name="tot">0.000 </string>
+    <string name="title_activity_galaxy_login">Sign in </string>
+    <string name="User_Name">User Name </string>
+    <string name="Password">Password </string>
+    <string name="Login">Login </string>
+    <string name="Main_Page"> HOME  </string>
+    <string name="New">New </string>
+    <string name="Save">Save </string>
+    <string name="Print">Print </string>
+    <string name="Delete">Delete </string>
+    <string name="Post">Sumbit</string>
+    <string name="Clint_Nane">Customer Name </string>
+    <string name="Order_ID">Order ID </string>
+    <string name="Client_ID">Customer No </string>
+    <string name="Location">Location </string>
+    <string name="Add_item">Add Item </string>
+    <string name="item_no">Item No </string>
+    <string name="Item_Name">Item Name </string>
+    <string name="Price">Price </string>
+    <string name="Quentity">Quentity </string>
+    <string name="Unit">Unit </string>
+    <string name="Tax">Tax </string>
+    <string name="T_Tax">Tax value </string>
+    <string name="Bounes">Bounes </string>
+    <string name="Dics">Discount </string>
+    <string name="Total">Total </string>
+    <string name="Total_Tax">Total Tax </string>
+    <string name="Net_Total">Net Total </string>
+    <string name="Order_Item">Sel order </string>
+    <string name="Order_Search"> Order Search </string>
+    <string name="Add_Item1">Add Item </string>
+    <string name="Add">Add </string>
+    <string name="Cancle">cancel</string>
+    <string name="Acc_Report">Account Statement </string>
+    <string name="From_Date">From Date </string>
+    <string name="Account_Num">Account Number </string>
+    <string name="To_Date">To Date </string>
+    <string name="month">month </string>
+
+
+    <string name="openedsuccessfully">The tour has been opened successfully</string>
+
+    <string name="Visitsummary">Visit Summary</string>
+
+    <string name="withsupervisor">With Supervisor</string>
+    <string name="errorup">An error occurred while checking for updates, please try again later</string>
+
+
+    <string name="Pleaseselectaitem">Please select a item</string>
+
+    <string name="mustselectkey">A key must be selected before adding the item</string>
+
+    <string name="alreadyadded">The item has already been added</string>
+
+
+    <string name="ok">ok</string>
+
+    <string name="New_Search">New Search</string>
+    <string name="Time">Time </string>
+    <string name="Duration">Duration </string>
+    <string name="posted">Posted</string>
+    <string name="nonposted">Non Posted</string>
+
+    <string name="postCompleteSucc">Post has been successful</string>
+    <string name="postCompleteerr">The post process was unsuccessful</string>
+    <string name="back">back</string>
+
+    <string name="Deletepostedvisits">Delete posted visits</string>
+
+    <string name="monthlypost">Post of the monthly plan</string>
+
+    <string name="loginerror">The login information is incorrect</string>
+    <string name="UpdateNotAllowedafterpost">Cannot be modified after posted</string>
+    <string name="saveandpost">Cannot be posted before save</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="Pleasewait">Please Wait</string>
+    <string name="postprogres">The post process is in progress</string>
+
+
+    <string name="deleteconf">Are sure of the deleting process ..?</string>
+
+    <string name="deleteerror">The deletion process was unsuccessful</string>
+    <string name="deleteone">The deletion process was completed successfully</string>
+    <string name="postmediacalvist">post mediacal vist</string>
+
+
+    <string name="Chech_Acc"> Check balance </string>
+    <string name="Clint_balance"> Client Balance </string>
+    <string name="Max_Balance"> Facility cap </string>
+    <string name="Net_Balance"> Final Balance </string>
+    <string name="Search_Customer"> Customer </string>
+    <string name="Sale_invoice"> Sales Invoice </string>
+    <string name="Catch_Receipt"> Catch </string>
+
+
+    <string name="Serial_Number">Serial Number </string>
+    <string name="total_cash">Total cash </string>
+    <string name="cash_type">Cash type </string>
+    <string name="account_name">Account name </string>
+    <string name="cash_amount">Cash </string>
+    <string name="notes">Notes </string>
+    <string name="checks_amount">Checks Sum </string>
+    <string name="date">Ddate </string>
+    <string name="coin_type">Coin Type </string>
+    <string name="add_recv">Add Voucher </string>
+    <string name="update_info">Update Data </string>
+    <string name="Man_Summery">Daily Summary </string>
+    <string name="Sales_invoic">Sales Invoices </string>
+    <string name="T2">Receivables </string>
+    <string name="T3">Sale Orders </string>
+    <string name="T4">Verification Code </string>
+
+
+    <string name="T5">Unphased Movements </string>
+    <string name="Man_Balance">Inventory Adjustment </string>
+    <string name="Number_Of_Item">Number of items </string>
+    <string name="Trans_Q_Report">Report Quantity Inventory Reveal </string>
+    <string name="Retrive_Data">Retrive Information </string>
+    <string name="View_Item_Cost">Query item cost </string>
+    <string name="Search_Item">Search for an item </string>
+    <string name="Day">Today </string>
+    <string name="Visit_List">Visit Schedule </string>
+    <string name="Gallary_Item">Browse Items </string>
+    <string name="FromStroe">From Repository </string>
+    <string name="ToStore">To a Repository </string>
+    <string name="OrderNo">Document number </string>
+    <string name="TransQty">Material Transfer Document </string>
+    <string name="ItemCount">Count of items </string>
+    <string name="EnterUserName">Please enter your username! </string>
+    <string name="EnterPassword">Please enter your password! </string>
+    <string name="DisAmt">Discount Value </string>
+    <string name="Disnubbmer">Value </string>
+    <string name="disPrec">Discount Ratio </string>
+    <string name="promotion">Promotions </string>
+    <string name="EnterValue">Please enter a value </string>
+    <string name="ItemExists">Item Exists </string>
+    <string name="Ok">OK </string>
+
+
+    <string name="Ordersales">Sale Order </string>
+    <string name="AddCompleteSucc">Save operation completed successfully </string>
+    <string name="storeqty">Warehouse Quantity </string>
+
+    <string name="OrderPrecent">Percent Quantity </string>
+    <string name="InvoiceType">Invoice Type </string>
+    <string name="CasInvoice">Cash </string>
+    <string name="GetData">Retrieve </string>
+    <string name="addCheck">Add Check </string>
+    <string name="CheckNo">Check No. </string>
+    <string name="Amt">Amount </string>
+    <string name="BankNm">Bank Name </string>
+    <string name="CheckTotal">Check Total </string>
+    <string name="CheckCount">CheckCount </string>
+    <string name="Excellent">Excellent </string>
+    <string name="Medium">Medium </string>
+    <string name="good">Good </string>
+    <string name="Question">Question </string>
+    <string name="Answer">Answer </string>
+    <string name="number">Number </string>
+    <string name="CustomerQuantity">Customer Quantity Inventory </string>
+    <string name="Hidden">Hide </string>
+    <string name="Unpost">Uncertify </string>
+    <string name="TarnsFromServer">Pulling data from the server </string>
+    <string name="PostTransAction">Approval of movements </string>
+    <string name="UpdatData">Update information </string>
+    <string name="Customers">Customers </string>
+    <string name="Banks">Banks </string>
+    <string name="Items">Items </string>
+    <string name="Factors">Conversion Factor </string>
+    <string name="Currency">Currency </string>
+    <string name="TransferQnty">Promissory Note </string>
+    <string name="Users">Users </string>
+    <string name="ItemsCat">Material Classes </string>
+    <string name="Cash">Cash </string>
+    <string name="interneterror">Please make sure you are connected to the internet</string>
+    <string name="Image">Image</string>
+    <string name="WhatsApperror">WhatsApp application not available</string>
+    <string name="week">Week</string>
+    <string name="dayes">Days</string>
+    <string name="CashCustomer">Cash Customers </string>
+    <string name="CompanyInfo">Organization Information </string>
+    <string name="Codes">Verification Codes </string>
+    <string name="CustomerPrice">Customer Last Selling Price </string>
+    <string name="PriceCat">Price Classes </string>
+    <string name="Qty_Supply">Supplied Quantity </string>
+    <string name="QtySoled">Quantity Sold </string>
+    <string name="StoreQty">Store Quantity </string>
+    <string name="ActQty">Quantity Sold </string>
+    <string name="Diff">Difference </string>
+    <string name="questionnaire">Questionnaire </string>
+    <string name="InvoiceNo">Invoice number </string>
+    <string name="invoiceStates">Invoice Status </string>
+    <string name="InvoiceCount">Invoice Count </string>
+    <string name="time">Time </string>
+    <string name="states">State </string>
+    <string name="OrderType">The type of bond </string>
+    <string name="samples">Samples</string>
+    <string name="Summary">Summary</string>
+    <string name="Subjects">Subjects</string>
+
+    <string name="Count">Count </string>
+    <string name="VisiMangemnet">Open Visit </string>
+    <string name="fromTime">start time </string>
+    <string name="ToTime">End of Time </string>
+    <string name="lat">X </string>
+    <string name="Longitude">Y </string>
+    <string name="barcode">Barcode </string>
+    <string name="VisitDuration">Visit Duration </string>
+    <string name="SaveLocation">Save Client Location </string>
+    <string name="openBarCode">Read barcode </string>
+    <string name="UpdateLocation">Update Location </string>
+    <string name="Address">Address </string>
+    <string name="StartVisit">Start Visit </string>
+    <string name="EndVisit">End Visit </string>
+    <string name="EditeTransactios">Edite Transactios </string>
+    <string name="LocationNotfound">"Location Not Available" </string>
+    <string name="StartVisitSucc">The start of the tour operation completed successfully </string>
+    <string name="StartVisitNotSucc">The start of the tour did not complete successfully </string>
+    <string name="EndVisitSucc">End of tour operation completed successfully </string>
+    <string name="EndVisitNotSucc">End of tour process not completed, please make sure there is an open tour </string>
+    <string name="DoYouWantToContinSave">Do you want to continue saving </string>
+    <string name="UpdateNotAllowed">The file cannot be modified </string>
+    <string name="DoYouWantContinDelete">Do you want to continue deletion </string>
+
+    <string name="DeleteCompleteSuccsully">Deletion completed successfully </string>
+    <string name="No">No</string>
+    <string name="ConnectError"> Connection failed </string>
+    <string name="PostNotCompleteSuccfully">Approval was not completed successfully </string>
+    <string name="PostCompleteSuccfully">Post completed successfully </string>
+    <string name="PostCompleteSuccfully2">Published successfully, visit will be closed </string>
+
+    <string name="PleaseWait">Please wait </string>
+    <string name="PostUnderProccess">Approving the request </string>
+    <string name="SaveNotAllowedWithoutItem">Cannot save without items </string>
+    <string name="Arabic">Arabic </string>
+    <string name="English">English </string>
+    <string name="ManNm">Delegate Name </string>
+    <string name="Signature">Sign </string>
+    <string name="Retrive_DataUnderProcess">Retrieving data is in progress </string>
+    <string name="Retrive_DataCompleteSucc">Data recovery completed successfully </string>
+    <string name="NoData">No Data </string>
+    <string name="PleaseCheckDate">Please check the date </string>
+    <string name="Credit">Credit </string>
+    <string name="Debt">Debit </string>
+    <string name="Balance">Balance </string>
+    <string name="Beginning_balance">Beginning Balance Duration </string>
+    <string name="description">Description </string>
+    <string name="DocType">Document Type </string>
+    <string name="DocNo">Document Number </string>
+    <string name="CurrencyValue">Opposite Currency </string>
+    <string name="Checks">Checks </string>
+    <string name="CashAndChecks">Cash + Checks </string>
+    <string name="AddNotCompleteSucc">Save Operation Failed </string>
+    <string name="DeleteNotCompleteSuccsully">Delete failed successfully </string>
+    <string name="QtyNotAvalable">Quantity Unavailable </string>
+    <string name="DeleteNotAllowed">Cannot delete </string>
+    <string name="Sale_invoiceSearch">Search sales invoices </string>
+    <string name="Update">Modify </string>
+    <string name="SearchHere">Search Here </string>
+    <string name="setting">settings </string>
+    <string name="ReturnQty">Return Item </string>
+    <string name="DeviceType">Device Type </string>
+    <string name="PrinterType">Printer Type </string>
+    <string name="PrepareQty">Deed of Transfer </string>
+    <string name="Doctorvisit">Report Samples </string>
+    <string name="frommonth">Beginning of a month </string>
+    <string name="yearfrom">The beginning of a year </string>
+    <string name="CountryReport">Sales Report </string>
+    <string name="CountryNm">Country Name </string>
+    <string name="manNo">Man No. </string>
+    <string name="LocationSearch">Search in regions </string>
+    <string name="LocationNo">Zone Number </string>
+    <string name="LocationNm">Location name </string>
+
+
+    <string name="Representative">Representative</string>
+
+    <string name="Logout">تسجيل خروج</string>
+
+    <string name="ManSearch">Search for delegates </string>
+    <string name="ManvisitReport">Delegate Visit Report </string>
+    <string name="Batch">Batch </string>
+    <string name="Expdate">Expiry date </string>
+    <string name="PhrStatus">Pharmacy Status </string>
+    <string name="Active">Active </string>
+    <array name="Main_Item">
+        <item>Account Statement</item>--0
+        <item>Open Visit</item>---1
+        <item>Delegates Follow</item>---3
+        <item>Sales Invoice</item>---3
+        <item>Receipt Deed</item>---4
+        <item>Sell Order</item>---5
+        <item>Browse Quantities</item>---6
+        <item>Update Data</item>---7
+        <item>Cost Material</item>---8
+        <item>Visits Schedule</item>---9
+        <item>Customer Quantity Inventory</item>---10
+        <item>Questionnaire</item>---11
+        <item>Return Items</item>---12
+        <item>General Settings</item>--13
+        <item>Request Processing</item>---14
+        <item>Modify Motions</item>---15
+        <item>Inventory Adjustment</item>---16
+        <item>Browse Articles</item>---17
+
+        <item>Sales Report</item>---18
+        <item>Hits Report</item>---19
+        <item>Monthly Plan</item>---20
+        <item>Return Items</item>--21
+        <item>Exit</item>--22
+        <item>International Galactic Group V1</item>--23
+    </array>
+    <array name="Main_Item3">
+        <item>تقرير طلبات البيع</item>
+        <item>اخر فاتورة</item>
+        <item>تقرير الباتش</item>
+        <item>حفظ موقع العميل</item>
+        <item>اللغة الانجليزية</item>
+
+        <item>خروج</item>
+        <item>مجموعة المجرة الدولية V1</item>
+    </array>
+    <string name="Connect"> Connect</string>
+
+    <string name="round">Tours</string>
+    <string name="medical_clinics">Medical Clinics</string>
+    <string name="attachments">Attachments</string>
+    <string name="Updating_data">Updating Data</string>
+    <string name="Monthly_plan">Monthly Plan</string>
+    <string name="delegate_summary">Delegate Summary</string>
+    <string name="Medical_Clinics_Report">Medical Clinics Report</string>
+    <string name="Medical_Sales_System">Medical Sales System 1.1</string>
+    <string name="processing">Processing</string>
+    <string name="specialization">Specialization</string>
+    <string name="thedoctors">The Doctors</string>
+    <string name="dateandtime">Date and time</string>
+    <string name="sequences">Sequences</string>
+    <string name="area">Area</string>
+    <string name="themonth">The month</string>
+    <string name="theyear">The year</string>
+    <string name="day">Day</string>
+    <string name="Visits"> Visits</string>
+    <string name="sequencesupdate">sequences update</string>
+    <string name="deleteAll">delete All</string>
+
+    <string name="updateusers">update users</string>
+
+    <string name="Updated">Updated </string>
+    <string name="successfully"> Successfully</string>
+    <string name="erroe">Not Successfully </string>
+
+    <string name="Pleaseselectadate">Please select a date</string>
+
+    <string name="Friday">Friday </string>
+
+    <string name="Sunday">Sunday </string>
+    <string name="Monday">Monday </string>
+    <string name="Tuesday">Tuesday </string>
+    <string name="Wednesday">Wednesday </string>
+    <string name="Thursday">Thursday </string>
+    <string name="Saturday">Saturday </string>
+
+
+    <string name="MaterialConversionTransactions">Material Conversion Transactions</string>
+
+
+    <string name="itemssellingunits">Items selling units</string>
+
+
+    <string name="Doctors">Doctors</string>
+
+
+    <string name="open_visit">Open visit</string>
+    <string name="Beginnin_end_of_the_visit">Beginning end of the visit</string>
+    <string name="Area">Area</string>
+    <string name="nonpost">Non post</string>
+    <string name="all">All</string>
+    <string name="notentered">Not Entered</string>
+    <string name="entered">Entered</string>
+    <string name="Postvist">Post Visits</string>
+    <string name="nonpostevisits">There are no closed and unpublished visits</string>
+
+    <string name="currency">العملة</string>
+
+    <string name="nonposteno"> There are non post invoices</string>
+
+    <string name="nonpostereceipts">  There are no receipts non posted</string>
+
+    <string name="nonposteh">There are no process non posted</string>
+
+    <string name="evening">Evening</string>
+    <string name="morning">Morning</string>
+
+    <string name="Planday">Plan details during the day</string>
+
+    <string name="Clinicname">Clinic name</string>
+    <string name="ClinicNO">Clinic number</string>
+    <string name="Close_the_visit">Close the visit</string>
+    <string name="visitform">Visit Form</string>
+    <string name="Thereisanopenvisit">There is an open visit</string>
+    <string name="addareas">Add Area</string>
+    <string name="Planday30">Plan details within 30 days</string>
+
+    <string name="sendtoadmin">Send to admin</string>
+    <string name="vacation">Vacation</string>
+    <string name="Officialholiday">Official Holiday</string>
+
+    <string name="fetchinginformationerror">Error fetching time information</string>
+
+    <string name="medicalreport">Medical Clinics Report</string>
+    <string name="connect">Connect</string>
+    <string name="discon">DisConnect</string>
+    <string name="hint">Please input IP</string>
+    <string name="contextandcode">print context,lineAndBarCode</string>
+    <string name="read">Read Buffer</string>
+    <string name="image">Print Image</string>
+    <string name="image1">Print Raste Image</string>
+    <string name="text">Print text and cutpaper</string>
+
+    <string name="bleselect">Please select BLE dev</string>
+    <string name="usbselect">Please select USB dev</string>
+    <string name="toast_discon_success">Disconnect success</string>
+    <string name="toast_discon_faile">Disconnect success</string>
+    <string name="toast_present_con">there is no connection</string>
+    <string name="send_success">Send Success</string>
+    <string name="send_failed">Send Failed</string>
+    <string name="not_con_printer">there is no connection</string>
+    <string name="usb_pre_con">present connected Usb dev:</string>
+    <string name="con_success">Connect success</string>
+    <string name="con_failed">Connect failed</string>
+    <string name="con_has_discon">connection has disconnected</string>
+    <string name="sb">Select</string>
+    <string name="start_pos_activity">Start PosPrint</string>
+    <string name="start_76_activity">Start 76 PosPrint</string>
+    <string name="start_tsc_activity">Start TSC PosPrint</string>
+    <string name="qrcode">Print QRcode</string>
+    <string name="none_ble_device">no devices are found</string>
+    <string name="none_ipaddress">pleesa input the ipaddress first!</string>
+    <string name="connect_first">please connet the printer first!</string>
+    <string name="this_is_text">This is Text!</string>
+    <string name="text_for">text for!</string>
+    <string name="error_level">error_level</string>
+    <string name="qrcode_content">input content，create QRCode</string>
+    <string name="qrcode_clear">clear</string>
+    <string name="qrcode_creat">creat</string>
+    <string name="qrcode_print">print</string>
+    <string name="qrcode_scan">scan</string>
+    <string name="none_content">please input content first！</string>
+    <string name="check_linke">checkLink</string>
+    <string name="net_connet_loss">network connect loss,please go back and connet the printer again</string>
+    <string name="self_check">self check</string>
+
+    <string name="diverse">Diverse</string>
+    <string name="collecting">Collecting</string>
+    <string name="MedicalReport">Medical Clinics Report</string>
+    <string name="visitdone">Completed visits report</string>
+
+    <string name="endofround">End of Round</string>
+    <string name="medicaladvertising">Medical Advertising</string>
+    <string name="vist_Number">Vist Number</string>
+    <string name="freesamples">Free Samples</string>
+
+    <string name="Itemsdiscussed">Items Discussed</string>
+    <string name="addappointment">Add Appointment</string>
+
+    <string name="visiteerrorinformation">Incomplete visit information</string>
+    <string name="Copying">Copying data is in progress. Please wait</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment </string>
+
+    <string name="AvailableQuantity">Available Quantity</string>
+
+    <string name="Theratio">The ratio</string>
+    <string name="Doctorsvisits">Doctors visits</string>
+    <string name="doctornumber">Doctor Number</string>
+    <string name="doctorname">Doctor Name</string>
+    <string name="Visitinginformation">Visiting Information</string>
+
+    <string name="starttime">Start Time</string>
+    <string name="endtime">End Time</string>
+
+    <string name="Status">Status</string>
+
+    <string name="deletevisits">Delete Visits</string>
+
+    <string name="gifts">Gifts</string>
+
+
+    <string name="customerrating">Customer Rating</string>
+    <string name="visittype">Visit Type</string>
+    <string name="Objectivesofvisit">Goals of Visit</string>
+    <!--خط السير-->
+
+
+    <string name="Location_Coordinates1">Location Coordinates1</string>
+    <string name="Location_Coordinates2">Location Coordinates2</string>
+    <string name="Area_Name">Area Name</string>
+    <string name="Barcode">Barcode</string>
+    <string name="Update_Location">Update Location</string>
+    <string name="Barcode_Reading">Barcode Reading</string>
+    <string name="Duration_Visit">Duration Visit</string>
+    <string name="Search_by_range">Search By Range</string>
+    <string name="exceptional">Exceptional Tour</string>
+    <string name="startvisitcustomer">Start Visit Customer </string>
+    <string name="itinerary">Itinerary</string>
+    <string name="week6">Week</string>
+    <string name="Galaxy">Galaxy</string>
+    <string name="dontsave">Saving Is Not Done</string>
+    <string name="PerLocation">Check the permissions of the location</string>
+    <string name="notopenvivit">It is not possible to open a visit because you are outside the clients domain</string>
+    <string name="addImagemsg">The tour cannot be completed without taking pictures</string>
+    <string name="takeCustNotesMsg">Please inform the customer of the following notes</string>
+    <string name="receipt_voucher">Receipt Voucher</string>
+    <string name="sales_bill">Sales Bill</string>
+    <string name="sales_revenue">Sales Revenue</string>
+    <string name="Customer_Status_Canceled">Customer Status: Canceled</string>
+    <string name="Customer_Status_Open">Customer Status: Open</string>
+    <string name="Customer_Status_Suspended">Customer Status: Suspended</string>
+    <string name="Customer_Status_Pending">Customer Status: Pending</string>
+    <string name="Supervisor_approval_request">Supervisor approval request</string>
+    <string name="Verification_Code">Verification Code</string>
+    <string name="Excluded_from_offers">Excluded from offers</string>
+    <string name="tax_exempt">Tax Exempt</string>
+    <string name="customer_type">Customer Type</string>
+    <string name="receivable">Receivable</string>
+    <string name="CustmerMsg">This customer is suspended, please check with the Finance Department</string>
+    <string name="plan">In Plan</string>
+    <string name="outplan">Out Plan</string>
+    <string name="title_activity_convert_layout_img1">Convert_Layout_Img1</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_tesar">tesar</string>
+    <string name="title_activity_man_summery1">ManSummeryActivity1</string>
+
+</resources>

@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        agp_version = '3.4.3'
+        agp_version1 = '3.2.1'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven {
+            url "https://raw.github.com/embarkmobile/zxing-android-minimal/mvn-repo/maven-repository/"
+        }
+    }
+    dependencies {
+        // classpath 'com.android.tools.build:gradle:3.2.1'
+           classpath 'com.android.tools.build:gradle:3.5.0'
+         classpath 'com.google.gms:google-services:4.2.0'
+      //  classpath "com.android.tools.build:gradle:$agp_version1"
+
+    }
+
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

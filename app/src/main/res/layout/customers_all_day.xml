@@ -1,0 +1,130 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ss"
+android:layout_marginTop="11dp"
+    android:layout_marginBottom="11dp"
+    android:orientation="vertical"
+    android:weightSum="2"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        >
+        <TextView
+
+            android:layout_margin="7dp"
+            android:id="@+id/tv_Nm"
+            android:textSize="20dp"
+            android:layout_weight="0.8"
+            android:gravity="right"
+            android:textColor="#101010"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="TextView" />
+        <CheckBox
+            android:id="@+id/imageButton34"
+            android:layout_gravity="left"
+            android:layout_margin="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="0.2"
+            android:text="" />
+
+  <!--      <RadioButton
+            android:id="@+id/checkButton"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+android:checked="false"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="" />
+        <RadioButton
+            android:id="@+id/checkButton2"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:checked="true"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="" />
+-->
+        <TextView
+            android:paddingTop="14dp"
+            android:layout_margin="7dp"
+            android:id="@+id/tv_ID"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:layout_weight="1.5"
+            android:gravity="right"
+            android:textColor="#101010"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/Catogry"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+
+            android:text="N :"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/VisitNo"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:text="P :"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/PlanNo"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:text="R :"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/Sum"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

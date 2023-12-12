@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+
+    >
+
+    <Methdes.MyTextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/btn_cir_white_fill_black"
+        android:gravity="center"
+        android:text="sadsadsad"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+
+
+</LinearLayout>

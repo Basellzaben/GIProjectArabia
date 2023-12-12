@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GalaxyMainActivity"
+    android:background="#282b30"
+    android:layoutDirection="rtl"
+    android:id="@+id/R_Back">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/Blue"
+        android:weightSum="4"
+        android:layout_height="50dp"
+        android:id="@+id/LL1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Frag1"></FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="6.5"
+        android:id="@+id/LL2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/LL1"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="1.5"
+
+            android:padding="10dp">
+            <RelativeLayout
+                android:id="@+id/hh"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.1"
+                android:background="#fff"
+                android:layoutDirection="ltr"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="215dp"
+                    android:background="@mipmap/row2"
+                    android:gravity="center">
+
+                    <Methdes.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="الصيانة"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/row1"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Main_Page"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:background="@color/White"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="13">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/CustName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:hint="Constmer Name"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:id="@+id/CustNo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Customer No"
+                            android:ems="10"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Customer"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/Corrective"
+                            android:hint="Corrective"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:id="@+id/Perventive"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Perventive"
+                            android:ems="10"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Servics Type"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:id="@+id/Ser"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Serial No"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="visible"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/tv_y"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Running Hours"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/malfunction"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="malfunction and cause"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/Notes"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Notes"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter1_H"
+                            android:hint="Hours"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Model"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter1_Model"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:id="@+id/textView260"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Line Air Fliter"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter2_H"
+                            android:hint="Hours"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Model"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter2_Model"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:id="@+id/textView260"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Line Air Fliter"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter3_H"
+                            android:hint="Hours"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Model"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter3_Model"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:id="@+id/textView260"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Line Air Fliter"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter4_H"
+                            android:hint="Hours"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Model"
+                            android:ems="10"
+                            android:id="@+id/LineAirFliter4_Model"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:id="@+id/textView260"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Line Air Fliter"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:hint="Model"
+                            android:id="@+id/Water_Separator"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Water Separator"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:hint="Model"
+                            android:id="@+id/Air_Dryer"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Air Dryer"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:hint="Model"
+                            android:id="@+id/Air_receiver"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Air_receiver"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/White"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="13">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp"
+                        >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1.44"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:background="@drawable/btn_cir_white_fill_black">
+
+                                <TextView
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:id="@+id/tv_OrderNo"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="#000">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.4"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageButton4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:onClick="btn_Search_Orders"
+                                        android:src="@mipmap/ic_search" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Order No"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+<!--
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp"
+                        >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1.44"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:background="@drawable/btn_cir_white_fill_black">
+
+                                <TextView
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:id="@+id/tv_CustName"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="#000">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.4"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageButton4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:onClick="btn_SearchCust"
+                                        android:src="@mipmap/ic_search" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Maintenance Team"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+-->
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp"
+                        >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1.44"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:background="@drawable/btn_cir_white_fill_black">
+
+                                <TextView
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:id="@+id/tv_Model"
+                                    android:enabled="false"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="#000">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.4"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageButton4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:onClick="Select_FromSrore"
+                                        android:src="@mipmap/ic_search" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Model"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+
+                            android:id="@+id/Temp"
+                            android:layout_weight="1.44"
+                            android:layout_marginLeft="10dp"
+
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:gravity="center" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Temp"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/Min"
+                            android:hint="Min"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:inputType="textPersonName"
+                            android:hint="Max"
+                            android:ems="10"
+                            android:id="@+id/Max"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center" />
+                        <Methdes.MyTextView
+                            android:id="@+id/textView260"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Work Pressure"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/tv_Duration"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1.44"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Remedy"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/Remedy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1.44"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:text="Remedy"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/AIRFILTER_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/AIRFILTER_renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="renew"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/AIRFILTER_Clean"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Clean"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="AIR FILTER"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/Oilseparator_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/Oilseparator_renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="renew"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/Oilseparator_AP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="AP"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Oil separator"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/OilFILTER_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/OilFILTER_renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="renew"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/OilFILTER_AP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Clean"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Oil FILTER"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/OilFilling_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/OilFilling_renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="renew"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/OilFilling_Clean"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Clean"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Oil Filling"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/Oil_Filling_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/Oil_Filling_Fill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:checked="false"
+                            android:text="Fill"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/Oil_Filling_Check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Check"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/Oil_Filling_Renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Renew"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="Oil Filling"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/Belt_H"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/Belt_Retighten"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="Retighten"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/Belt_Check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Check"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/Belt_Renew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Renew"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="V-Belt"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp">
+
+                        <EditText
+                            android:id="@+id/g"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:hint="Hours"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/btn_cir_white_fill_black"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="textPersonName" />
+                        <CheckBox
+                            android:id="@+id/s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+
+                            android:checked="false"
+                            android:text="renew"
+                            android:textSize="15dp"/>
+                        <CheckBox
+                            android:id="@+id/ss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+
+                            android:checked="false"
+                            android:text="Clean"
+                            android:textSize="15dp"/>
+
+                        <Methdes.MyTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.66"
+                            android:gravity="center"
+                            android:text="AIR FILTER"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="2dp"
+                    android:layout_height="2dp"
+
+                    android:onClick="btn_Calc_Promotion"
+                    android:text="احتساب العروض"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="gola_vist"
+                    android:orientation="horizontal">
+
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView230"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Team"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView130"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_new" />
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="AddItem"
+                    android:orientation="horizontal">
+
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView230"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="اضافه مادة"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView130"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_new" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="btn_save_po"
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView231"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:elevation="1dp"
+                        android:text="حفظ"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_save" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="btn_delete"
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView233"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="حذف"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_delete" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="btn_print"
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView236"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="طباعة"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_print" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_Share"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="btn_share"
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/textView2037"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="اعتماد"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_post" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Home_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/Footer_Menu"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:onClick="btn_back"
+                    android:orientation="horizontal">
+
+                    <Methdes.MyTextView
+                        android:id="@+id/tv_Back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="الرئيسية"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_home" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/button14"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:onClick="btn_Calc_Promotion"
+                    android:text="promotions"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

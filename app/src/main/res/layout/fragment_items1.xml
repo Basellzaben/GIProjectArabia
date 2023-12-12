@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="8"
+            android:paddingTop="10dp"
+            android:background="@color/Black11"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:layout_weight="0.2">
+
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="رقم المادة"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+            <Methdes.MyTextView
+                android:gravity="center_horizontal"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="أسم المادة"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="الكمية"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+
+
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:text="الوحدة"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:text="الضريبة"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="قيمة الضريبة"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="السعر"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+            <Methdes.MyTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="المجموع"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:layout_height="match_parent"/>
+
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/itemlistview"
+            android:layout_width="match_parent"
+            android:layout_weight="1.55"
+            android:layout_height="0dp"></ListView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="visible">
+
+                <Methdes.MyTextView
+                    android:id="@+id/finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Blue"
+                    android:gravity="center"
+                    android:text="رجــوع"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/check_list_row.xml" value="0.22" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/contact_list_row.xml" value="0.18" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/fragment_pop_add_check2.xml" value="0.33" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/layout_pop_po_select_items_new.xml" value="0.15" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/layout_pop_sal_inv_select_items.xml" value="0.33" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/n_activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/view_lokup_row.xml" value="0.33" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/view_recv_voucher_n.xml" value="0.33" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/layout/view_sale__invoice.xml" value="0.33" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/menu/main.xml" value="0.1" />
+        <entry key="..\:/CashVanP_Git/app/src/main/res/menu/sal_invoice_menu.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/drawable-hdpi-v9/ic_edit.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/drawable-hdpi-v9/ic_media.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/drawable/rounded_edittext.xml" value="0.10693359375" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_bluetooth.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_customer_qty.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_doctor_report.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_inter_mic_printer.xml" value="0.1544871794871795" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_main_new.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_man_summery_new.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_monthly_sales_man_schedule.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_orders_items.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_pana.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_pos.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_print.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_print_setting.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_rec_voucher_search.xml" value="0.11376953125" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_schedule_man.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_select__customer.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_sitting_new.xml" value="0.1544871794871795" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_tsc.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_update_data_to_mobile_medical.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/activity_z76.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/bluetooth_menu.xml" value="0.4684159378036929" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/connectxprinteractivity.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/country_all_day.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/country_of_day.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/cust_search.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/customers_all_day.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/customersday.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/doctor_search_row.xml" value="0.123046875" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_add__new__vist.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_customer_info.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_galaxy_new_home_activity.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop__free__sample__items.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop__subjects__items.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop__update__month.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop__update__year.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop_show__m_e_d_i_a.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_pop_show_clinc_doctor_visit_notes.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_search__customer_frq.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_select__area.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_select__customer_med.xml" value="0.1748046875" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/fragment_view_visit_frg.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/header_frag.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/keys_item.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/media_item.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/monthly_sechedule_row.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/n_activity_main.xml" value="0.30180806675938804" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/popsmallmenue.xml" value="0.21" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/row_doctor_report.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/row_free_sample.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/sal_inv_img_line.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/subject_row.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/trans_qty.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/update_data_row.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/view_update_data_to_mobile.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/visit_notes_row.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/week_days_rows.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/week_no_rows.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/layout/xprinter_sales_invoice.xml" value="0.10595703125" />
+        <entry key="..\:/GI Projects/NewVirgin/GIVARGINPak/app/src/main/res/menu/menu_pop_anim.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/drawable-hdpi-v9/ic_media.xml" value="0.20654296875" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/drawable/rounded_edittext.xml" value="0.20654296875" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/acc_img.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_catch_receipt.xml" value="0.18" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert__rec_vouch__to__img.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert__rec_vouch__to__img_tab_10.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert__sal__invoice__to__img.xml" value="0.26578073089701" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert__sal__return__to__img.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert__sal__return__to__img__line1.xml" value="0.13818359375" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_convert_sal_invoice_to_img_ukrainian.xml" value="0.40791268758526605" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_delivery.xml" value="0.13317191283292978" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_doctor_report.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_galaxy_login.xml" value="0.15673828125" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_login_halitam_new.xml" value="0.12724358974358974" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_main.xml" value="0.12724358974358974" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_main2.xml" value="0.17916666666666667" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_main_new.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_man__qty.xml" value="0.17916666666666667" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_man_balance_qty.xml" value="0.12109375" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_man_summery.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_man_summery_new.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_monthly_sales_man_schedule.xml" value="0.2490372272143774" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_mp__chart.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_orders_items.xml" value="0.1669921875" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_preaparemanqty.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_sale__return.xml" value="0.17" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_sales_invoice.xml" value="0.24516129032258063" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_schedule_man.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_select__customer.xml" value="0.16" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_trans_qty_report.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/activity_visit_imges.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/convert_man_summery_to_img.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/convert_po_img_home.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/country_all_day.xml" value="0.12353515625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/covert_acc_approval_report.xml" value="0.5" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/covert_acc_report.xml" value="0.1986754966887417" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/customers_all_day.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/delivarydesign.xml" value="0.21" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_galaxy_new_home_activity.xml" value="0.18" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_pop__free__sample__items.xml" value="0.111328125" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_pop__subjects__items.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_pop_man_edit.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_pop_sal_return__select__items.xml" value="0.10595703125" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_pop_show__m_e_d_i_a.xml" value="0.111328125" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/fragment_qlist.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/keys_item.xml" value="0.1103515625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/layout_pop_sal_inv_select_items.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/man_atten.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/man_location_report.xml" value="0.19140625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/man_summery_img.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/monthly_sechedule_row.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/n_activity_main.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/n_ee.xml" value="0.137109375" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/popcustqty.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/rec_voucher_img.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/report_img_row.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_inv_img.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_inv_img_line.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_inv_img_ukania.xml" value="0.40791268758526605" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_invoce_row.xml" value="0.1767578125" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_return_img.xml" value="0.13818359375" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_return_img_line1.xml" value="0.4214202561117579" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/sal_return_row.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/so_tsc_img.xml" value="0.2810304449648712" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/store_trans_img.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/trans_qty.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_convert_man_balance_qty.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_convert_prapare_qty.xml" value="0.12109375" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_convert_trans_qty.xml" value="0.1015625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_man_balance_report.xml" value="0.1" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_prapare_qty_report.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_recv_voucher_n.xml" value="0.22" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_sale__invoice.xml" value="0.27349397590361446" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_trans_qty_report.xml" value="0.1015625" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_trans_qty_row.xml" value="0.25" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/view_update_data_to_mobile.xml" value="0.33" />
+        <entry key="..\:/GI Projects/NewVirgin/New folder/GIVARGINPak/app/src/main/res/layout/xprinter_sales_invoice.xml" value="0.25" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_customer_qty.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_man_summery.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_man_summery_new.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_mp__chart.xml" value="0.10833333333333334" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_sale__return.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/activity_trans_qty_report.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/fragment_pop_sal_return__select__items.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/man_summery_img.xml" value="0.19140625" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/n_activity_main.xml" value="0.14" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/view_sale__invoice.xml" value="0.21" />
+        <entry key="..\:/New folder (6)/GIVARGIN/app/src/main/res/layout/xprinter_sales_invoice_ele.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="liberica-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

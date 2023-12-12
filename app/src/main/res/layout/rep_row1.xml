@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/Black11"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="7"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Methdes.MyTextView
+            android:layout_weight="1"
+            android:id="@+id/OrderNo"
+            android:layout_margin="1dp"
+            android:background="@color/White"
+            android:layout_width="0dp"
+            android:text="رقم الطلب"
+            android:gravity="center"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:gravity="center"
+            android:id="@+id/CustName"
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="أسم العميل"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/CustNo"
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="رقم العميل"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/Total"
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="المجموع"
+            android:gravity="center"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:id="@+id/TaxTotal"
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="مجموع الضريبة"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+        <Methdes.MyTextView
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:id="@+id/NetTotal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="الاجمالي"
+            android:gravity="center"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+
+        <Methdes.MyTextView
+            android:layout_margin="1dp"
+            android:background="@color/White"
+
+            android:id="@+id/DESC_A"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="حالة الطلب"
+            android:gravity="center"
+            android:textColor="@color/Blue"
+            android:textSize="18dp"
+            android:layout_height="match_parent"/>
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
