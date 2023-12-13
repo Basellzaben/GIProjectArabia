@@ -6,10 +6,13 @@
 
     <LinearLayout
         android:id="@+id/Mainlayout"
-        android:layout_width="420dp"
+        android:layout_width="800dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:background="#FFFFFF"
+
+        android:paddingEnd="80dp"
+        android:paddingStart="40dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -25,6 +28,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:visibility="invisible"
                 android:scaleType="fitXY"
                 android:src="@mipmap/diomnlogo" />
         </LinearLayout>
@@ -40,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="مجموعة المجرة الدولية"
+                android:visibility="invisible"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="24sp" />
@@ -49,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:paddingBottom="40dp"
             android:orientation="horizontal">
 
             <TextView
@@ -57,180 +63,217 @@
                 android:layout_height="wrap_content"
                 android:text="سند القبض"
                 android:textAlignment="center"
+                style="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="24sp" />
+                android:textSize="22dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
+            android:weightSum="4"
+            android:background="@drawable/blue_fill_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView32"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:padding="8dp"
                 android:layout_height="wrap_content"
-                android:text="رقم القبض    :"
+                android:text="رقم القبض:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp"
+                android:textSize="13dp"
                 android:typeface="monospace" />
 
             <TextView
                 android:id="@+id/et_OrdeNo"
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.4"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:padding="8dp"
+
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:background="#000"
+                android:textSize="13dp" />
+
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:padding="8dp"
                 android:layout_height="wrap_content"
-                android:gravity="left"
+                android:gravity="right"
+                android:layout_weight="0.6"
                 android:text="التاريخ   :"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/et_Date"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:padding="8dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
+            android:layout_weight="4"
+            android:background="@drawable/blue_fill_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView47"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:layout_weight="0.6"
                 android:layout_height="wrap_content"
-                android:text="نوع القبض       :"
+                android:text="نوع القبض:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
-
+                android:textSize="13dp" />
             <TextView
                 android:id="@+id/tv_type"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:layout_weight="1.4"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/textView103"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView105"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="العملة   :"
+                android:text=""
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/tv_Cur"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:background="#000"
+                android:textSize="13dp" />
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="8dp"
+
+                android:text="العملة :"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000" />
+                android:textColor="#000"
+                android:textSize="13dp" />
+            <TextView
+                android:id="@+id/tv_Cur"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="8dp"
+
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000"
+                android:textSize="13dp" />
+           
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
+            android:layout_weight="4"
+            android:background="@drawable/blue_fill_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView16"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:padding="8dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="اسم الحساب   :"
+                android:text="اسم الحساب :"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tv_cusnm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:padding="8dp"
+
                 android:gravity="right"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+                android:textSize="13dp" />
 
             <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:background="#000"
+                android:textSize="13dp" />
+            <TextView
                 android:id="@+id/textView17"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="رقم الحساب    :"
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:layout_weight="0.6"                      android:layout_height="wrap_content"
+                android:text="رقم الحساب:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tv_acc"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:layout_weight="1.4"                      android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
                 android:focusableInTouchMode="false"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
+
+
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
             android:layout_weight="0"
+            android:background="@drawable/blue_fill_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="100dp"
+                android:padding="8dp"
+
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|right"
-                android:text="مبلغ القبض      :"
+                android:text="مبلغ القبض:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/et_Amt"
@@ -238,57 +281,69 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
+                android:padding="8dp"
                 android:textIsSelectable="false"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+
+            android:layout_weight="4"
+            android:background="@drawable/blue_fill_white"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView46"
-                android:layout_width="120dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:padding="8dp"
+
                 android:layout_height="wrap_content"
-                android:text="المبلغ النقدي       :"
+                android:text="المبلغ النقدي:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tv_Cash"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"                android:layout_height="wrap_content"
+                android:padding="8dp"
+
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000" />
-
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:background="#000"
+                android:textSize="13dp" />
             <TextView
                 android:id="@+id/tv_Checktotal1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"                android:layout_height="wrap_content"
                 android:text="مبلغ الشيكات  :"
+                android:padding="8dp"
+
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/tv_Checktotal"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="80dp"
+           android:layout_marginBottom="5dp"
             android:layout_weight="0"
             android:gravity="right"
             android:orientation="horizontal">
@@ -296,17 +351,20 @@
             <TextView
                 android:id="@+id/textView36"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="ملاحظات        :"
+                android:padding="8dp"
+                android:layout_height="match_parent"
+                android:text="الملاحظات:"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/et_notes"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:padding="8dp"
+
                 android:gravity="right"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
@@ -318,6 +376,7 @@
             android:id="@+id/lytCheck1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -326,75 +385,87 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="معلومات الشيكات"
-                android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
-                android:textSize="24sp" />
+                style="bold"
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lytCheck2"
+            android:id="@+id/LytHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0"
-            android:gravity="right"
-            android:orientation="horizontal">
+            android:background="@color/Gray1"
+            android:layout_marginBottom="0dp"
+            android:weightSum="5">
 
             <TextView
-                android:id="@+id/Ser"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/blue_fill_white"
+
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
                 android:text="التسلسل"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textIsSelectable="false"
+                android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/textView35"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
                 android:text="رقم الشيك"
+                android:background="@drawable/blue_fill_white"
+
+                android:textColor="#000"
+                android:textIsSelectable="false"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="التاريخ"
+                android:background="@drawable/blue_fill_white"
+
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
+
 
             <TextView
-                android:id="@+id/textView33"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="تاريخه"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="اسم البنك"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/blue_fill_white"
+
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
+
+
 
             <TextView
-                android:id="@+id/textView6"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/tv_total"
+                android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
                 android:text="المبلغ"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/blue_fill_white"
+
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textIsSelectable="false"
+                android:textSize="13dp" />
 
         </LinearLayout>
 
@@ -419,46 +490,59 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
+            android:layout_weight="4"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView89"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="اسم المندوب  :   "
+                android:text="اسم المندوب وتوقيعه"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
+                android:layout_weight="0.5"
                 android:textIsSelectable="false"
-                android:textSize="18sp" />
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/tv_UserNm"
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
+                android:padding="4dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:gravity="right"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000"
-                android:textSize="20dp" />
+                android:textSize="14dp" />
 
 
             <TextView
                 android:id="@+id/textView44"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="توقيع المندوب"
+                android:text="اسم المستلم وتوقيعه"
+                android:layout_weight="0.5"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="14dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000"
+                android:textSize="20dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="invisible"
             android:layout_marginBottom="30dp"
             android:orientation="horizontal">
 
@@ -471,7 +555,7 @@
                 android:background="@drawable/blue_fill_white"
                 android:gravity="center"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="13dp" />
 
             <TextView
                 android:id="@+id/textView251"

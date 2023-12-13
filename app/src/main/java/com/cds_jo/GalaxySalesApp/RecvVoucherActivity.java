@@ -1671,7 +1671,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
                 "   Post <=0  AND   DocNo ='" + OrdeNo.getText().toString().replaceAll("[^\\d.]", "") + "'";
 
         Cursor c2 = sql_Handler.selectQuery(q3);
-        if (c2 != null && c2.getCount() != 0) {
+   /*     if (c2 != null && c2.getCount() != 0) {
             new SweetAlertDialog(RecvVoucherActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("سند القبض")
                     .setContentText("لا يمكن الطباعة الا بعد الاعتماد")
@@ -1680,7 +1680,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
 
             c2.close();
             return;
-        }
+        }*/
         InsertLogTrans obj = new InsertLogTrans(RecvVoucherActivity.this, SCR_NO, SCR_ACTIONS.Print.getValue(), et_OrdeNo.getText().toString(), tv_acc.getText().toString(), "", "0");
 
         Intent k = new Intent(this, Convert_RecVouch_To_Img.class);
@@ -1698,7 +1698,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
         }
 
 
-        if (IsNew == true) {
+    /*    if (IsNew == true) {
             AlertDialog alertDialog = new AlertDialog.Builder(
                     this).create();
             alertDialog.setTitle("سند قبض");
@@ -1711,43 +1711,12 @@ public class RecvVoucherActivity extends AppCompatActivity {
             });
             alertDialog.show();
             return;
-        }
-
-        if (ComInfo.ComNo == Companies.Arabian.getValue()) {
-            k = new Intent(this, Convert_RecVouch_To_Img_Tab10.class);
-        } else if (ComInfo.ComNo == Companies.goodsystem.getValue()) {
-            k = new Intent(this, Convert_RecVouch_To_Img_GoodSystem.class);
+        }*/
 
 
-        } else if (ComInfo.ComNo == Companies.Ukrania.getValue()) {
-
-            k = new Intent(this, Xprinter_RecVoucher.class);
-            k.putExtra("OrderNo", OrdeNo.getText().toString().replaceAll("[^\\d.]", ""));
-            startActivity(k);
-        } else if (ComInfo.ComNo == Companies.beutyLine.getValue()) {
-            k = new Intent(this, Convert_RecVouch_To_Img_Tab10.class);
-
-        } else if (ComInfo.ComNo == Companies.Afrah.getValue() || ComInfo.ComNo == Companies.nwaah.getValue()) {
-            k = new Intent(this, Xprinter_RecVoucher.class);
-
-        } else {
-            String q2 = "SELECT  *  from  RecVoucher where" +
-                    "   Post <=0  AND   DocNo ='" + OrdeNo.getText().toString().replaceAll("[^\\d.]", "") + "'";
-
-            Cursor c3 = sql_Handler.selectQuery(q2);
-            if (c3 != null && c3.getCount() != 0) {
-                new SweetAlertDialog(RecvVoucherActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
-                        .setTitleText("سند القبض")
-                        .setContentText("لا يمكن الطباعة الا بعد الاعتماد")
-                        .setCustomImage(R.drawable.error_new)
-                        .show();
-
-                c3.close();
-                return;
-            }
             k = new Intent(this, Convert_RecVouch_To_Img.class);
 
-        }
+
         k.putExtra("Scr", "Sale_Inv");
         k.putExtra("OrderNo", OrdeNo.getText().toString().replaceAll("[^\\d.]", ""));
         k.putExtra("IDN", DB.GetValue(RecvVoucherActivity.this, "RecVoucher", "IDN", "DocNo='" + OrdeNo.getText().toString().replaceAll("[^\\d.]", "") + "'"));

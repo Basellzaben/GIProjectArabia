@@ -4488,7 +4488,7 @@ try {
         String q1 = "SELECT distinct *  from  Sal_invoice_Hdr where    " +
                 "   Post < 0 AND   OrderNo ='" + OrderNo.getText().toString().trim() + "'";
 
-        Cursor c1 = sqlHandler.selectQuery(q1);
+  /*      Cursor c1 = sqlHandler.selectQuery(q1);
         if (c1 != null && c1.getCount() != 0) {
             new SweetAlertDialog(Sale_InvoiceActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("فاتورة المبيعات")
@@ -4498,7 +4498,7 @@ try {
 
             c1.close();
             return;
-        }
+        }*/
         TextView OrdeNo = (TextView) findViewById(R.id.et_OrdeNo);
         TextView tv_acc = (TextView) findViewById(R.id.tv_acc);
         CheckBox chk_showTax = (CheckBox) findViewById(R.id.chk_showTax);

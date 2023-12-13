@@ -6,16 +6,28 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cds_jo.GalaxySalesApp.ComInfo;
 import com.cds_jo.GalaxySalesApp.Companies;
@@ -24,10 +36,15 @@ import com.cds_jo.GalaxySalesApp.SqlHandler;
 import com.sewoo.jpos.printer.ESCPOSPrinter;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class Convert_RecVouch_To_Img_GoodSystem extends AppCompatActivity {
     private ESCPOSPrinter posPtr;
@@ -36,6 +53,7 @@ public class Convert_RecVouch_To_Img_GoodSystem extends AppCompatActivity {
     ListView lvCustomList;
     private Button mButton;
     private Context context;
+    View ReportView;
     ImageView img_Logo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -250,9 +268,145 @@ public class Convert_RecVouch_To_Img_GoodSystem extends AppCompatActivity {
     }
 
     public void btn_convert(View view) {
-        LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
+        createPdf();
+       /* LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
         PrintReport_PR3 PR3 = new PrintReport_PR3(Convert_RecVouch_To_Img_GoodSystem.this,
                 Convert_RecVouch_To_Img_GoodSystem.this, lay, 570, 1);
-        PR3.DoPrint();
+        PR3.DoPrint();*/
+    }
+
+
+    private void createPdf() {
+
+
+        //  TextView tv_itemCount = (TextView) findViewById(R.id.tv_itemCount);
+        //  LinearLayout tv_itemCount2 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout);
+
+
+
+
+        // ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) tv_itemCount2.getLayoutParams();
+     /*   int item = Integer.parseInt(tv_itemCount.getText().toString());
+
+
+        if(item==0){
+            params.height = 180;
+            //  space.setLayoutParams(params);
+
+        }
+        else if(item==1){
+            params.height = 180;
+            // space.setLayoutParams(params);
+
+        }else if(item==2){
+            params.height = 160;
+            //  space.setLayoutParams(params);
+        }else if(item==3){
+            params.height = 120;
+
+        }else if(item==4){
+            params.height = 100;
+            // space.setLayoutParams(params);
+        }else if(item==5){
+            params.height = 90;
+            // space.setLayoutParams(params);
+        }else if(item==6){
+            params.height = 70;
+            // space.setLayoutParams(params);
+        }else{
+            params.height = 24;
+
+        }*/
+
+
+        Toast.makeText(this, "PRINTING ... " , Toast.LENGTH_LONG).show();
+
+        WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        float hight = displaymetrics.heightPixels;
+        float width = displaymetrics.widthPixels;
+
+        int convertHighet = (int) hight
+                , convertWidth = (int) width;
+
+        LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
+
+
+
+        ReportView = lay;
+        Bitmap bitmap = loadBitmapFromView(ReportView);
+
+        PdfDocument document = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+
+        Canvas canvas = page.getCanvas();
+
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffffff"));
+        canvas.drawPaint(paint);
+
+
+        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth(), bitmap.getHeight(), true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        document.finishPage(page);
+
+
+        // write the document content
+        // String targetPdf = "/sdcard/test.pdf";
+        String folder_main = "/Android/Cv_Images/SalInv_Sig" +
+                getIntent().getStringExtra("OrderNo") + "PP.pdf";
+        File filePath = new File(Environment.getExternalStorageDirectory(), folder_main);
+
+        // File filePath = new File(targetPdf);
+        try {
+            document.writeTo(new FileOutputStream(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        // close the document
+        document.close();
+        // OpenPDFFile3();
+
+
+        File file = filePath;
+        String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
+
+        String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_NEW_TASK);
+
+        Uri uri = FileProvider.getUriForFile(Convert_RecVouch_To_Img_GoodSystem.this, getPackageName() + ".provider", file);
+
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        startActivity(Intent.createChooser(intent, "choseFile"));
+
+
+
+
+    }
+    public static Bitmap loadBitmapFromView(View v) {
+
+        v.measure(View.MeasureSpec.makeMeasureSpec(v.getLayoutParams().width,
+                View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(
+                v.getLayoutParams().height, View.MeasureSpec.UNSPECIFIED));
+        v.layout(0, 0, v.getMeasuredWidth(), v.getMeasuredHeight());
+        Bitmap b = Bitmap.createBitmap(v.getWidth(), v.getHeight(),
+                Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(b);
+        v.draw(c);
+        return b;
     }
 }

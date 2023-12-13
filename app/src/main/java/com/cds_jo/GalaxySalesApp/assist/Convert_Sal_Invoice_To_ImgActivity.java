@@ -16,19 +16,24 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
+import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -46,11 +51,13 @@ import com.cds_jo.GalaxySalesApp.DB;
 import com.cds_jo.GalaxySalesApp.PopOrderSing;
 import com.cds_jo.GalaxySalesApp.R;
 import com.cds_jo.GalaxySalesApp.SqlHandler;
+import com.cds_jo.GalaxySalesApp.XprinterDoc.Xprinter_SalesInvoice;
 import com.sewoo.jpos.printer.ESCPOSPrinter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -59,6 +66,9 @@ import java.util.Date;
 import java.util.Locale;
 
 import Methdes.MyTextView;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class Convert_Sal_Invoice_To_ImgActivity extends FragmentActivity {
     private ESCPOSPrinter posPtr;
@@ -74,7 +84,8 @@ public class Convert_Sal_Invoice_To_ImgActivity extends FragmentActivity {
     LinearLayout Layout_name;
     Button btn_Save,btn_Clear,btn_Cancel;
     LinearLayout mContent;
-    View ViewNotes;
+    View ViewNotes;    View ReportView;
+
     signature mSignature;
     Bitmap bitmap;
     ImageView img_Logo;
@@ -165,11 +176,10 @@ try {
         Intent i = getIntent();
         mView = findViewById(R.id.f_view);
         TextView OrderNo = (TextView) findViewById(R.id.tv_OrderNo);
-        OrderNo.setText(getIntent().getStringExtra("OrderNo"));
+        OrderNo.setText("فاتورة رقم ("+getIntent().getStringExtra("OrderNo")+")");
 
 
-        final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.
-                getDefaultAdapter();
+        final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
 
 
@@ -180,37 +190,37 @@ try {
         tv_TaxAcc.setText(sharedPreferences.getString("TaxAcc1", ""));
 
 
-        TextView ManManMobile =(TextView)findViewById(R.id.tv_ManMobile);
+      //  TextView ManManMobile =(TextView)findViewById(R.id.tv_ManMobile);
 
         String  Mobile = "";
         Mobile= DB.GetValue(Convert_Sal_Invoice_To_ImgActivity.this,"manf","Mobile1","man='"+UserID+"'");
         if(Mobile.equalsIgnoreCase("")){
             Mobile="";
         }
-        ManManMobile.setText(Mobile);
+      //  ManManMobile.setText(Mobile);
 
 
 
-        TextView tv_SupervisorMobile =(TextView)findViewById(R.id.tv_SupervisorMobile);
-        tv_SupervisorMobile.setText(sharedPreferences.getString("SuperVisorMobile", ""));
+      //  TextView tv_SupervisorMobile =(TextView)findViewById(R.id.tv_SupervisorMobile);
+      //  tv_SupervisorMobile.setText(sharedPreferences.getString("SuperVisorMobile", ""));
 
 
 
-        TextView tv_CompName =(TextView)findViewById(R.id.tv_CompName);
-        tv_CompName.setText(sharedPreferences.getString("CompanyNm", ""));
+       // TextView tv_CompName =(TextView)findViewById(R.id.tv_CompName);
+      //  tv_CompName.setText(sharedPreferences.getString("CompanyNm", ""));
 
         SimpleDateFormat StartTime = new SimpleDateFormat("HH:mm:ss",Locale.ENGLISH);
         String StringTime = StartTime.format(new Date());
-        TextView Time = (TextView)findViewById(R.id.tv_time);
-        Time.setText(StringTime);
+     //   TextView Time = (TextView)findViewById(R.id.tv_time);
+      //  Time.setText(StringTime);
 
-       TextView tv_footer =(TextView)findViewById(R.id.tv_footer);
-        TextView tv_footer1 =(TextView)findViewById(R.id.tv_footer1);
+      // TextView tv_footer =(TextView)findViewById(R.id.tv_footer);
+       // TextView tv_footer1 =(TextView)findViewById(R.id.tv_footer1);
 
         TextView tv_footer3 =(TextView)findViewById(R.id.tv_footer3);
 
-        tv_footer.setText(sharedPreferences.getString("CompanyNm", "")+" - "+sharedPreferences.getString("Address", "")+" - "+sharedPreferences.getString("Notes", ""));
-        tv_footer1.setText(" هاتف الشركة  "+ (sharedPreferences.getString("CompanyMobile", "")));
+       // tv_footer.setText(sharedPreferences.getString("CompanyNm", "")+" - "+sharedPreferences.getString("Address", "")+" - "+sharedPreferences.getString("Notes", ""));
+      //  tv_footer1.setText(" هاتف الشركة  "+ (sharedPreferences.getString("CompanyMobile", "")));
 
 
         String  footer3 = "" ;
@@ -219,9 +229,8 @@ try {
              footer3 ="ان المواد المشروحة اعلاه قد سلمت بحالة جيدة بعد المعاينة";
 
          }else{
-             footer3 = " لا تعتبر هذه الفاتورة مدفوعة دون ايصال رسمي من الشركة ،";
-             footer3 = footer3 + " \n" + "إن مجرد توقيع المستلم ادناه يعتبر إقرار منه باستلام البضاعة  المبينة اعلاه بالعدد والسعر المحددين";
-             footer3 = footer3 + " " + "وان المستلم ادناه ملزم بدفع القيمة كاملة عند المطالبة   دون إشعار أو إنذار  ويسقط حقه في توجيه اليمين";
+             footer3 = "نشهد بأن هذه الفاتورة صحيحة و حقيقية و أنها الوحيدة الصادرة عنا بشأن البضاعة المبينة فيها ،";
+             footer3 = footer3 + " \n" + "و ان الاسعار المذكورة فيها تعبر عن القيمة الحقيقية لهذه البضاعة.";
 
 
          }
@@ -230,35 +239,35 @@ try {
         ShowTax=getIntent().getStringExtra("ShowTax");
         name= getIntent().getStringExtra("name");
 
-        TextView    tv_UserNm  = (TextView)findViewById(R.id.tv_UserNm);
-        tv_UserNm.setText(u);
+      //  TextView    tv_UserNm  = (TextView)findViewById(R.id.tv_UserNm);
+       // tv_UserNm.setText(u);
 
         TextView    textView10  = (TextView)findViewById(R.id.textView10);
 
-        TextView    textView12  = (TextView)findViewById(R.id.textView12);
+      //  TextView    textView12  = (TextView)findViewById(R.id.textView12);
         TextView    tv_TotalTax  = (TextView)findViewById(R.id.tv_TotalTax);
 
         TextView    tv_Tax_Caption  = (TextView)findViewById(R.id.tv_Tax_Caption);
 
         TextView    tv_DvNm  = (TextView)findViewById(R.id.tv_DvNm);
 
-        TextView textView11 =(TextView)findViewById(R.id.textView11);
+       // TextView textView11 =(TextView)findViewById(R.id.textView11);
         TextView tv_Total =(TextView)findViewById(R.id.tv_Total);
-        TextView textView86 =(TextView)findViewById(R.id.textView86);
-        TextView tv_Disc =(TextView)findViewById(R.id.tv_Disc);
+       // TextView textView86 =(TextView)findViewById(R.id.textView86);
+      //  TextView tv_Disc =(TextView)findViewById(R.id.tv_Disc);
 
 
-        textView12.setVisibility(View.VISIBLE);
+      //  textView12.setVisibility(View.VISIBLE);
         tv_TotalTax.setVisibility(View.VISIBLE);
-        textView11.setVisibility(View.VISIBLE);
+      //  textView11.setVisibility(View.VISIBLE);
         tv_Total.setVisibility(View.VISIBLE);
-        textView86.setVisibility(View.VISIBLE);
-        tv_Disc.setVisibility(View.VISIBLE);
+       // textView86.setVisibility(View.VISIBLE);
+       // tv_Disc.setVisibility(View.VISIBLE);
 
          if (ShowTax.equals("0"))
         {
             textView10.setText("");
-            textView12.setText("");
+            //textView12.setText("");
             tv_TotalTax.setText("");
            // tv_TaxAcc.setText("");
           //  tv_Tax_Caption.setText("");
@@ -272,63 +281,9 @@ try {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mButton.setBackground(getResources().getDrawable(R.drawable.blue_fill_white));
-                mButton.setTextColor(getResources().getColor(R.color.Blue));
-                //
-                /*if (!mBluetoothAdapter.isEnabled()) {
-                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-
-                }*/
-
-                // mBluetoothAdapter.enable();
-
-                LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
-   /*             if (PrinterType.equals("1")) {
-
-                    if (Company.equals("1") || Company.equals("2")) {
-                        PrintReport_SEWOO_ESCPOS ObjPrint = new PrintReport_SEWOO_ESCPOS(Convert_Sal_Invoice_To_ImgActivity.this,
-                                Convert_Sal_Invoice_To_ImgActivity.this, lay, 570, 1);
-                        ObjPrint.ConnectToPrinter();
-
-                    }
-                    *//*if (Company.equals("2")) {
-                        PrintReport_SEWOO_ESCPOS ObjPrint = new PrintReport_SEWOO_ESCPOS(Convert_Sal_Invoice_To_ImgActivity.this,
-                                Convert_Sal_Invoice_To_ImgActivity.this, lay, 200, 1);
-                        ObjPrint.ConnectToPrinter();
-                    }*//*
-                }
-
-                if (PrinterType.equals("2")) {
-                    PrintReport_Zepra520 obj =  new PrintReport_Zepra520(Convert_Sal_Invoice_To_ImgActivity.this,
-                            Convert_Sal_Invoice_To_ImgActivity.this,lay,560,1);
-                    obj.DoPrint();
-                }*/
 
 
-
-                if (ComInfo.ComNo== Companies.Arabian.getValue()) {
-                    PrintReport_TSC obj = new PrintReport_TSC(Convert_Sal_Invoice_To_ImgActivity.this,
-                            Convert_Sal_Invoice_To_ImgActivity.this, lay, 550, 1);
-                    obj.DoPrint();
-
-                }else {
-                    PrintReport_Zepra520 obj = new PrintReport_Zepra520(Convert_Sal_Invoice_To_ImgActivity.this,
-                            Convert_Sal_Invoice_To_ImgActivity.this, lay, 570, 1);
-                    obj.DoPrint();
-                }
-
-
-
-
-
-
-             /*   PrintReport_Zepra520 obj =  new PrintReport_Zepra520(Convert_Sal_Invoice_To_ImgActivity.this,
-                            Convert_Sal_Invoice_To_ImgActivity.this,lay,560,1);
-                    obj.DoPrint();*/
-            //    ObjPrint.CopyCount = 2 ;
-
-
+                createPdf();
 
 
         }
@@ -448,7 +403,7 @@ try {
         openWhatsApp();
     }
     private void openWhatsApp() {
-        EditText     et_phoneNo=(EditText) findViewById(R.id.et_phoneNo);
+        EditText et_phoneNo=(EditText) findViewById(R.id.et_phoneNo);
         File imageFileToShare = new File("//sdcard/z1.jpg");
         Uri uri2 = Uri.fromFile(imageFileToShare);
         String toNumber = "+962785381939";
@@ -642,7 +597,7 @@ try {
 
         TextView tv_cusnm =(TextView)findViewById(R.id.tv_cusname);
         TextView et_Date =(TextView)findViewById(R.id.ed_date);
-        TextView tv_Disc =(TextView)findViewById(R.id.tv_Disc);
+      //  TextView tv_Disc =(TextView)findViewById(R.id.tv_Disc);
         TextView tv_NetTotal =(TextView)findViewById(R.id.tv_NetTotal);
         TextView tv_TotalTax =(TextView)findViewById(R.id.tv_TotalTax);
         TextView tv_Total =(TextView)findViewById(R.id.tv_Total);
@@ -661,13 +616,13 @@ try {
         TextView textView9 =(TextView)findViewById(R.id.textView9);
         TextView textView43 =(TextView)findViewById(R.id.textView43);
         TextView textView10 =(TextView)findViewById(R.id.textView10);
-        TextView tv_invoc_Type =(TextView)findViewById(R.id.tv_invoc_Type);
+     //   TextView tv_invoc_Type =(TextView)findViewById(R.id.tv_invoc_Type);
         TextView textView58 =(TextView)findViewById(R.id.textView58);
         TextView tv_itemCount =(TextView)findViewById(R.id.tv_itemCount);
         TextView textView107 =(TextView)findViewById(R.id.textView107);
         TextView tv_includetax =(TextView)findViewById(R.id.tv_includetax);
-        TextView tv_CusBal =(TextView)findViewById(R.id.tv_CusBal);
-        TextView tv_Seq =(TextView)findViewById(R.id.tv_Seq);
+       // TextView tv_CusBal =(TextView)findViewById(R.id.tv_CusBal);
+        //TextView tv_Seq =(TextView)findViewById(R.id.tv_Seq);
 
            TextView tv_DvNm =(TextView)findViewById(R.id.tv_DvNm);
 
@@ -698,14 +653,14 @@ try {
             textView11.setVisibility(View.INVISIBLE);
             tv_Total.setVisibility(View.INVISIBLE);
             textView86.setVisibility(View.INVISIBLE);
-            tv_Disc.setVisibility(View.INVISIBLE);
+           // tv_Disc.setVisibility(View.INVISIBLE);
 
             textView12.setHeight(0);
             tv_TotalTax.setHeight(0);
             textView11.setHeight(0);
             tv_Total.setHeight(0);
             textView86.setHeight(0);
-            tv_Disc.setHeight(0);
+          //  tv_Disc.setHeight(0);
 
 
 
@@ -753,23 +708,23 @@ try {
 
                 }
                // tv_cusnm.setText("");
-                tv_Disc.setText(c1.getString(c1.getColumnIndex("disc_Total")));
+              //  tv_Disc.setText(c1.getString(c1.getColumnIndex("disc_Total")));
                 tv_NetTotal.setText(c1.getString(c1.getColumnIndex("Net_Total")));
                 tv_TotalTax.setText(c1.getString(c1.getColumnIndex("Tax_Total")));
                 tv_DvNm.setText(c1.getString(c1.getColumnIndex("DelveryNm")));
 
                 if (c1.getString(c1.getColumnIndex("inovice_type")).toString().equals("0"))
                 {
-                    tv_invoc_Type.setText("نقدية");
+                 //   tv_invoc_Type.setText("نقدية");
 
                 }
                 else
                 {
-                    tv_invoc_Type.setText("ذمم");
+                 //   tv_invoc_Type.setText("ذمم");
                 }
 
                 if(ComInfo.ComNo==3){
-                    tv_invoc_Type.setText("نقدية");
+                 //   tv_invoc_Type.setText("نقدية");
                 }
 
                 if (ShowTax.equals("0")) {
@@ -782,7 +737,7 @@ try {
 
 
 
-                tv_Seq.setText(c1.getString(c1.getColumnIndex("Seq")));
+             //   tv_Seq.setText(c1.getString(c1.getColumnIndex("Seq")));
 
                 accno = c1.getString(c1.getColumnIndex("s.acc"));
             /*    //if (c1.getString(c1.getColumnIndex("include_Tax")).toString().equals("0")) {
@@ -802,23 +757,23 @@ try {
             }
             else {
                 tv_cusnm.setText("");
-                tv_Disc.setText(c1.getString(c1.getColumnIndex("disc_Total")));
+              //  tv_Disc.setText(c1.getString(c1.getColumnIndex("disc_Total")));
                 tv_NetTotal.setText(c1.getString(c1.getColumnIndex("Net_Total")));
                 tv_TotalTax.setText(c1.getString(c1.getColumnIndex("Tax_Total")));
                 tv_DvNm.setText(c1.getString(c1.getColumnIndex("DelveryNm")));
 
                 if (c1.getString(c1.getColumnIndex("inovice_type")).toString().equals("0"))
                 {
-                    tv_invoc_Type.setText("نقدية");
+                //    tv_invoc_Type.setText("نقدية");
 
                 }
                 else
                 {
-                    tv_invoc_Type.setText("ذمم");
+                 //   tv_invoc_Type.setText("ذمم");
                 }
 
                 if(ComInfo.ComNo==3){
-                    tv_invoc_Type.setText("نقدية");
+                //    tv_invoc_Type.setText("نقدية");
                 }
 
                 if (ShowTax.equals("0")) {
@@ -831,7 +786,7 @@ try {
 
 
 
-                tv_Seq.setText(c1.getString(c1.getColumnIndex("Seq")));
+              //  tv_Seq.setText(c1.getString(c1.getColumnIndex("Seq")));
 
                 accno = c1.getString(c1.getColumnIndex("s.acc"));
             /*    //if (c1.getString(c1.getColumnIndex("include_Tax")).toString().equals("0")) {
@@ -908,13 +863,13 @@ try {
    //   Toast.makeText(this,NetTotal +"   "   + UnpostedRecVoucher +"       " +UnpostedSales +" ", Toast.LENGTH_SHORT).show();
 
 
-        tv_CusBal.setText( SToD(Total+"")+"");
+      //  tv_CusBal.setText( SToD(Total+"")+"");
         getcutbill(accno);
 
     }
     public void getcutbill(String accno)
     {
-        TextView tv_CusBal =(TextView)findViewById(R.id.tv_CusBal);
+      //  TextView tv_CusBal =(TextView)findViewById(R.id.tv_CusBal);
         String NetTotal = DB.GetValue(Convert_Sal_Invoice_To_ImgActivity.this, "Customers", "CUST_NET_BAL", "no ='" + accno + "' ");
 
         String CustCelling = DB.GetValue(Convert_Sal_Invoice_To_ImgActivity.this, "Customers", "Celing", "no ='" + accno + "' ");
@@ -977,9 +932,9 @@ try {
         {
             UnpostedRecVoucher="0";
         }
-        tv_CusBal.setText(String.format(
+       /* tv_CusBal.setText(String.format(
                 Locale.ENGLISH, "%.3f",((Total2+Double.parseDouble(UnpostedSales))-Double.parseDouble(UnpostedRecVoucher) - Double.parseDouble(TotalRet))) + "");
-
+*/
     }
     private  Double SToD(String str){
         String f = "";
@@ -1074,30 +1029,30 @@ try {
         }
 
 
-        TextView textView125 =(TextView)findViewById(R.id.textView125);
-        TextView textView126 =(TextView)findViewById(R.id.textView126);
-        TextView textView196 =(TextView)findViewById(R.id.textView196);
+        //TextView textView125 =(TextView)findViewById(R.id.textView125);
+       // TextView textView126 =(TextView)findViewById(R.id.textView126);
+      //  TextView textView196 =(TextView)findViewById(R.id.textView196);
 
 
-            TextView tv_Dis_Pro_amt =(TextView)findViewById(R.id.tv_Dis_Pro_amt);
-            tv_Dis_Pro_amt.setText(SToD(Pro.toString()) + "");
+            //TextView tv_Dis_Pro_amt =(TextView)findViewById(R.id.tv_Dis_Pro_amt);
+            //tv_Dis_Pro_amt.setText();
 
-        TextView tv_Dis_amt =(TextView)findViewById(R.id.tv_Dis_amt);
-        tv_Dis_amt.setText(SToD(Dis_Amt.toString()) + "");
+       // TextView tv_Dis_amt =(TextView)findViewById(R.id.tv_Dis_amt);
+       // tv_Dis_amt.setText(SToD(Dis_Amt.toString()) + "");
 
-        if( SToD(tv_Dis_amt.getText().toString()) ==0.0 &&  SToD(tv_Dis_Pro_amt.getText().toString()) ==0.0 )
+        if( SToD(SToD(Dis_Amt.toString()) + "") ==0.0 &&  SToD(SToD(Pro.toString()) + "") ==0.0 )
         {
-            tv_Dis_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_amt.setHeight(0);
-            tv_Dis_Pro_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_Pro_amt.setHeight(0);
+          //  tv_Dis_amt.setVisibility(View.INVISIBLE);
+          //  tv_Dis_amt.setHeight(0);
+            //tv_Dis_Pro_amt.setVisibility(View.INVISIBLE);
+           // tv_Dis_Pro_amt.setHeight(0);
 
-            textView125.setVisibility(View.INVISIBLE);
-            textView125.setHeight(0);
-            textView126.setVisibility(View.INVISIBLE);
-            textView126.setHeight(0);
-            textView196.setVisibility(View.INVISIBLE);
-            textView196.setHeight(0);
+           // textView125.setVisibility(View.INVISIBLE);
+           // textView125.setHeight(0);
+          //  textView126.setVisibility(View.INVISIBLE);
+          //  textView126.setHeight(0);
+          //  textView196.setVisibility(View.INVISIBLE);
+          //  textView196.setHeight(0);
 
         }
 
@@ -1123,8 +1078,8 @@ try {
 
 
 
-            TextView tv_itemCount =(TextView)findViewById(R.id.tv_itemCount);
-              tv_itemCount.setText(contactList.size()+"");
+           // TextView tv_itemCount =(TextView)findViewById(R.id.tv_itemCount);
+            //  tv_itemCount.setText(contactList.size()+"");
             for (ContactListItems Obj : contactList){
 
                     view = inflater.inflate(R.layout.sal_invoce_row, null);
@@ -1132,35 +1087,32 @@ try {
                 /*if  (Company.equals("2")) {
                     view = inflater.inflate(R.layout.sal_invoce_row_1, null);
                 }*/
-                tv_no = (TextView) view.findViewById(R.id.tv_no);
+             //   tv_no = (TextView) view.findViewById(R.id.tv_no);
                 tv_name = (TextView) view.findViewById(R.id.tv_name);
                 tv_Qty = (TextView) view.findViewById(R.id.tv_Qty);
                 tv_Price = (TextView) view.findViewById(R.id.tv_Price);
                 tv_Unit = (TextView) view.findViewById(R.id.tv_Unit);
-                tv_tax = (TextView) view.findViewById(R.id.tv_tax);
+              //  tv_tax = (TextView) view.findViewById(R.id.tv_tax);
                 tv_total = (TextView) view.findViewById(R.id.tv_total);
-                tv_bounce = (TextView) view.findViewById(R.id.tv_bounce);
-                tv_Dis = (TextView) view.findViewById(R.id.tv_Dis);
 
 
 
 
-                tv_no.setText(Obj.getno());
+              //  tv_no.setText(Obj.getno());
                 tv_name.setText(Obj.getName());
                 try {
                     tv_Price.setText(Obj.getprice());
                 }catch (Exception ex ){}
                 tv_Qty.setText(Obj.getQty());
                 tv_Unit.setText(Obj.getUnite() );
-                tv_tax.setText(Obj.getTax());
+              //  tv_tax.setText(Obj.getTax());
                 tv_total.setText(Obj.getTotal());
-                tv_bounce.setText(Obj.getBounce());
-                tv_Dis.setText(Obj.getDis_Amt());
-                tv_tax.setText(Obj.getTax());
-                tv_tax.setVisibility(View.VISIBLE);
+
+               // tv_tax.setText(Obj.getTax());
+                //tv_tax.setVisibility(View.VISIBLE);
                 if (ShowTax.equals("0")) {
-                    tv_tax.setText("");
-                    tv_tax.setVisibility(View.INVISIBLE);
+                   // tv_tax.setText("");
+                   // tv_tax.setVisibility(View.INVISIBLE);
 
                 }
                 Sal_ItemSLayout.addView(view);
@@ -1169,16 +1121,16 @@ try {
 
 
 
-           TextView textView130 = (TextView)findViewById(R.id.textView130);
+          // TextView textView130 = (TextView)findViewById(R.id.textView130);
 
 
             ArrayList<Cls_Offers_Hdr> Offer_Header_List = new ArrayList<Cls_Offers_Hdr>();
             Offer_Header_List.clear();
             query = " Select  distinct  Offer_Name, Offer_Date, Offer_Type  from  Offers_Hdr  ";
             c1 = sqlHandler.selectQuery(query);
-            textView130.setText("");
+          //  textView130.setText("");
             if (c1 != null && c1.getCount() != 0) {
-                textView130.setText("العروض");
+              //  textView130.setText("العروض");
                 if (c1.moveToFirst()) {
                     do {
 
@@ -1256,4 +1208,147 @@ try {
         Intent i =  new Intent(this,Sale_InvoiceActivity.class);
         startActivity(i);
     }
+
+    private void createPdf() {
+
+
+      //  TextView tv_itemCount = (TextView) findViewById(R.id.tv_itemCount);
+      //  LinearLayout tv_itemCount2 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout);
+
+
+
+
+       // ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) tv_itemCount2.getLayoutParams();
+     /*   int item = Integer.parseInt(tv_itemCount.getText().toString());
+
+
+        if(item==0){
+            params.height = 180;
+            //  space.setLayoutParams(params);
+
+        }
+        else if(item==1){
+            params.height = 180;
+            // space.setLayoutParams(params);
+
+        }else if(item==2){
+            params.height = 160;
+            //  space.setLayoutParams(params);
+        }else if(item==3){
+            params.height = 120;
+
+        }else if(item==4){
+            params.height = 100;
+            // space.setLayoutParams(params);
+        }else if(item==5){
+            params.height = 90;
+            // space.setLayoutParams(params);
+        }else if(item==6){
+            params.height = 70;
+            // space.setLayoutParams(params);
+        }else{
+            params.height = 24;
+
+        }*/
+
+
+
+        WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        float hight = displaymetrics.heightPixels;
+        float width = displaymetrics.widthPixels;
+
+        int convertHighet = (int) hight
+        , convertWidth = (int) width;
+
+        LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
+
+
+
+        ReportView = lay;
+        Bitmap bitmap = loadBitmapFromView(ReportView);
+
+        PdfDocument document = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+
+        Canvas canvas = page.getCanvas();
+
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffffff"));
+        canvas.drawPaint(paint);
+
+
+        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth(), bitmap.getHeight(), true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        document.finishPage(page);
+
+
+        // write the document content
+        // String targetPdf = "/sdcard/test.pdf";
+        String folder_main = "/Android/Cv_Images/SalInv_Sig" +
+                getIntent().getStringExtra("OrderNo") + "PP.pdf";
+        File filePath = new File(Environment.getExternalStorageDirectory(), folder_main);
+
+        // File filePath = new File(targetPdf);
+        try {
+            document.writeTo(new FileOutputStream(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        // close the document
+        document.close();
+        // OpenPDFFile3();
+
+
+        File file = filePath;
+        String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
+
+        String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_NEW_TASK);
+
+        Uri uri = FileProvider.getUriForFile(Convert_Sal_Invoice_To_ImgActivity.this, getPackageName() + ".provider", file);
+
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        startActivity(Intent.createChooser(intent, "choseFile"));
+
+
+
+      /*  Uri fileUri= FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".opener.provider", filePath);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(fileUri, "application/pdf");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        startActivity(intent);*/
+
+        // openpdf2();
+        // openPDF();
+        //OpenPDFFile();
+      /*  Intent target = new Intent(Intent.ACTION_VIEW);
+        target.setDataAndType(Uri.fromFile(filePath),"application/pdf");
+        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        target.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        Intent intent = Intent.createChooser(target, "Open File");
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            // Instruct the user to install a PDF reader here, or something
+        }*/
+    }
+
+
 }

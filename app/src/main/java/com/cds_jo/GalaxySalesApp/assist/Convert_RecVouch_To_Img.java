@@ -8,12 +8,21 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,16 +43,22 @@ import com.sewoo.jpos.printer.ESCPOSPrinter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class Convert_RecVouch_To_Img extends AppCompatActivity {
     private ESCPOSPrinter posPtr;
     private View mView;
     SqlHandler sqlHandler ;
     ListView lvCustomList;
+    View ReportView;
+
     private Button mButton;
     private Context context;
     ImageView img_Logo;
@@ -53,24 +68,12 @@ public class Convert_RecVouch_To_Img extends AppCompatActivity {
         super.onCreate(savedInstanceState);
           SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         BPrinter_MAC_ID= sharedPreferences.getString("AddressBT", "");
-
+        setContentView(R.layout.activity_convert__rec_vouch__to__img);
 
         final String Company = sharedPreferences.getString("CompanyID", "1") ;
-        // 1 Dell
-        // 2 Lenovo
-        // 3 Samsung
-
-    /*   if  (Company.equals("1")){
-            setContentView(R.layout.activity_convert__rec_vouch__to__img);
-        }
-
-        if  (Company.equals("2")){
-            setContentView(R.layout.activity_convert__rec_vouch__to__img);
-        }*/
-       // final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
 
-        setContentView(R.layout.activity_convert__rec_vouch__to__img);
+
         img_Logo = (ImageView) findViewById(R.id.img_Logo);
         File imgFile = new  File("//sdcard/Android/Cv_Images/logo.jpg");
        try {
@@ -110,83 +113,10 @@ public class Convert_RecVouch_To_Img extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-                LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
-
-               /* if (PrinterType.equals("1")) {
-                    if (Company.equals("1")) {
-                        PrintReport_SEWOO_ESCPOS ObjPrint = new PrintReport_SEWOO_ESCPOS(Convert_RecVouch_To_Img.this,
-                                Convert_RecVouch_To_Img.this, lay, 570, 1);
-                        ObjPrint.ConnectToPrinter();
-                    }
-
-                    if (Company.equals("2")) {
-                        PrintReport_SEWOO_ESCPOS ObjPrint = new PrintReport_SEWOO_ESCPOS(Convert_RecVouch_To_Img.this,
-                                Convert_RecVouch_To_Img.this, lay, 200, 1);
-                        ObjPrint.ConnectToPrinter();
-                    }
-
-                }
-
-                if (PrinterType.equals("2")) {
-                    PrintReport_Zepra520 obj =  new PrintReport_Zepra520(Convert_RecVouch_To_Img.this,
-                            Convert_RecVouch_To_Img.this,lay,570,1);
-                    obj.DoPrint();
-                }*/
-
-               if (ComInfo.ComNo== Companies.Arabian.getValue()) {
-                   PrintReport_TSC obj = new PrintReport_TSC(Convert_RecVouch_To_Img.this,
-                           Convert_RecVouch_To_Img.this, lay, 550, 1);
-                   obj.DoPrint();
-
-               }else if(  ComInfo.ComNo==Companies.Sector.getValue()) {
-
-                   int paperWidth = 576;
-                   String portName ="BT:"+BPrinter_MAC_ID ; //"BT:TSP100-L0528";// PrinterTypeActivity.getPortName();
-                   String portSettings = "";
-                   PrinterFunctions.RasterCommand rasterType = PrinterFunctions.RasterCommand.Standard;
-
-                   Bitmap b = loadBitmapFromView(lay);
-                   ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-                   String filename = "z1.jpg";
-                   File sd = Environment.getExternalStorageDirectory();
-                   File dest = new File(sd, filename);
-
-                   try {
-                       FileOutputStream out = new FileOutputStream(dest);
-                       b.compress(Bitmap.CompressFormat.JPEG, 70, out);
-                       out.flush();
-                       out.close();
-                       //  bitmap.recycle();
-                   } catch (Exception e) {
-                       e.printStackTrace();
-                   }
-
-
-                   Bitmap myBitmap= BitmapFactory.decodeFile("//sdcard//z1.jpg");
-                   PrinterFunctions.PrintBitmap(context,portName,portSettings,myBitmap, paperWidth, false, rasterType);
+                createPdf();
 
 
 
-
-
-
-
-               }else if(  ComInfo.ComNo==Companies.Ukrania.getValue()) {
-
-                   PrintReport_Xprinter PR3 = new PrintReport_Xprinter(Convert_RecVouch_To_Img.this,
-                           Convert_RecVouch_To_Img.this, lay, 570, 1);
-                   PR3.DoPrint();
-
-
-               }else{
-
-
-                   PrintReport_Zepra520 obj = new PrintReport_Zepra520(Convert_RecVouch_To_Img.this,
-                           Convert_RecVouch_To_Img.this, lay, 570, 1);
-                   obj.DoPrint();
-               }
         }
     });
 
@@ -195,7 +125,88 @@ public class Convert_RecVouch_To_Img extends AppCompatActivity {
 
 
 
+    } private void createPdf() {
+
+
+        Toast.makeText(this, "PRINTING ... " , Toast.LENGTH_LONG).show();
+
+        WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        float hight = displaymetrics.heightPixels;
+        float width = displaymetrics.widthPixels;
+
+        int convertHighet = (int) hight
+                , convertWidth = (int) width;
+
+        LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
+
+
+
+        ReportView = lay;
+        Bitmap bitmap = loadBitmapFromView(ReportView);
+
+        PdfDocument document = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+
+        Canvas canvas = page.getCanvas();
+
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffffff"));
+        canvas.drawPaint(paint);
+
+
+        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth(), bitmap.getHeight(), true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        document.finishPage(page);
+
+
+        // write the document content
+        // String targetPdf = "/sdcard/test.pdf";
+        String folder_main = "/Android/Cv_Images/SalInv_Sig" +
+                getIntent().getStringExtra("OrderNo") + "PP.pdf";
+        File filePath = new File(Environment.getExternalStorageDirectory(), folder_main);
+
+        // File filePath = new File(targetPdf);
+        try {
+            document.writeTo(new FileOutputStream(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        // close the document
+        document.close();
+        // OpenPDFFile3();
+
+
+        File file = filePath;
+        String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
+
+        String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_NEW_TASK);
+
+        Uri uri = FileProvider.getUriForFile(Convert_RecVouch_To_Img.this, getPackageName() + ".provider", file);
+
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        startActivity(Intent.createChooser(intent, "choseFile"));
+
+
+
+
     }
+
     public static Bitmap loadBitmapFromView(View v) {
 
         v.measure(View.MeasureSpec.makeMeasureSpec(v.getLayoutParams().width,

@@ -106,7 +106,7 @@ public class CallWebServices  {
 
  URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
 
- URL = "http://192.168.43.36:3750/CV.asmx";
+ URL = "http://192.16فاتورة المبيعات8.43.36:3750/CV.asmx";
 
  URL = "http://46.185.131.143:3756/CV.asmx";
  URL = "http://10.0.1.50:3750/CV.asmx"; // khaldi test
