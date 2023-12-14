@@ -816,13 +816,16 @@ public class GalaxyNewHomeActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 if (ComInfo.ComNo== Companies.Afrah.getValue()) {
+
                     startActivity(new Intent(context, OrdersItems1.class));
 
                 }
                 else
                 {
+
                   startActivity(new Intent(context, OrdersItems.class));
                   //startActivity(new Intent(context, MentnisActivity.class));
+
                 }
 
 

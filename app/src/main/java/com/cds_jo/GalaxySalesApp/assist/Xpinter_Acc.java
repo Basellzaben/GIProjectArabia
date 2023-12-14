@@ -1,5 +1,7 @@
 package com.cds_jo.GalaxySalesApp.assist;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static com.cds_jo.GalaxySalesApp.TQNew.Convert_Prapre_Qty_To_Img1.loadBitmapFromView_NEW;
 
 import android.annotation.SuppressLint;
@@ -43,6 +45,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -133,7 +136,7 @@ public class Xpinter_Acc  extends FragmentActivity {
 
         Intent intent=new Intent(this, PosprinterService.class);
         bindService(intent, conn, BIND_AUTO_CREATE);
-        createPdf();
+      //  createPdf();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         BPrinter_MAC_ID =sharedPreferences.getString("AddressBT", "");
 
@@ -145,9 +148,10 @@ public class Xpinter_Acc  extends FragmentActivity {
         BTCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BTCon.setBackground(getResources().getDrawable(R.drawable.blue_fill_white));
+              /*  BTCon.setBackground(getResources().getDrawable(R.drawable.blue_fill_white));
               //  BTCon.setTextColor(getResources().getColor(R.color.Blue));
-                connetBle();
+                connetBle();*/
+                createPdf();
             }
         });
 
@@ -739,66 +743,7 @@ public class Xpinter_Acc  extends FragmentActivity {
         showList(OrdNo);
 
     }
-    private void createPdf() {
 
-        try {
-            WindowManager wm = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
-            Display display = wm.getDefaultDisplay();
-            DisplayMetrics displaymetrics = new DisplayMetrics();
-            this.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-            float hight = displaymetrics.heightPixels;
-            float width = displaymetrics.widthPixels;
-
-            int convertHighet = (int) hight, convertWidth = (int) width;
-
-            File imgFile = new  File("//sdcard//z1.jpg");
-           //  imgFile = new File("//sdcard/Android/Cv_Images/logo.jpg");
-
-            // imgFile = new File("//sdcard//z1.png");
-
-
-            if (imgFile.exists()) {
-                bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-
-            }
-
-
-            PdfDocument document = new PdfDocument();
-            PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
-            PdfDocument.Page page = document.startPage(pageInfo);
-
-            Canvas canvas = page.getCanvas();
-
-
-            Paint paint = new Paint();
-            paint.setColor(Color.parseColor("#ffffff"));
-            canvas.drawPaint(paint);
-
-
-            bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth(), bitmap.getHeight(), true);
-
-            paint.setColor(Color.BLUE);
-            canvas.drawBitmap(bitmap, 0, 0, null);
-            document.finishPage(page);
-
-
-            // write the document content
-            String targetPdf = "//sdcard//z2.pdf";
-            File filePath = new File(targetPdf);
-            try {
-                document.writeTo(new FileOutputStream(filePath));
-
-            } catch (IOException e) {
-                e.printStackTrace();
-                Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
-            }
-
-            // close the document
-            document.close();
-        } catch (Exception ex) {
-            Toast.makeText(this, ex.getMessage().toString(), Toast.LENGTH_SHORT).show();
-        }
-    }
     private void showList(String OrderNo) {
         Intent i = getIntent();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -828,12 +773,11 @@ public class Xpinter_Acc  extends FragmentActivity {
                 do {
                     Cls_Acc_Report contactListItems = new Cls_Acc_Report();
 
-                    if(c1.getString(c1.getColumnIndex("Date")).equalsIgnoreCase("عدد الحركات")) {
-                        contactListItems.setDes(c1.getString(c1.getColumnIndex("Des")) );
-                    }else{
+
                         contactListItems.setDes(c1.getString(c1
-                                .getColumnIndex("Des")) +"\n\r   " + c1.getString(c1.getColumnIndex("Date")));
-                    }
+                                .getColumnIndex("Des")) );
+
+
 
 
                     contactListItems.setCred(c1.getString(c1
@@ -842,6 +786,10 @@ public class Xpinter_Acc  extends FragmentActivity {
                             .getColumnIndex("Dept")));
                     contactListItems.setTot(c1.getString(c1
                             .getColumnIndex("Tot")));
+
+                    contactListItems.setDate(c1.getString(c1
+                            .getColumnIndex("Date")));
+
 
                     contactList.add(contactListItems);
 
@@ -868,7 +816,7 @@ public class Xpinter_Acc  extends FragmentActivity {
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view;
 
-        TextView tv_Des;
+        TextView tv_Des,tv_date;
         TextView Cred;
         TextView Dept;
         TextView Tot;
@@ -881,9 +829,10 @@ public class Xpinter_Acc  extends FragmentActivity {
             Cred = (TextView) view.findViewById(R.id.tv_Cred);
             Dept = (TextView) view.findViewById(R.id.tv_Dept);
             Tot = (TextView) view.findViewById(R.id.tv_Tot);
-
+            tv_date=(TextView) view.findViewById(R.id.tv_date);
 
             tv_Des.setText(Obj.getDes());
+            tv_date.setText(Obj.getDate());
             Cred.setText(Obj.getCred());
             Dept.setText(Obj.getDept());
             Tot.setText(Obj.getTot());
@@ -904,464 +853,6 @@ public class Xpinter_Acc  extends FragmentActivity {
 
 
 
-
-    }
-    private void showList5(String OrderNo) {
-        Intent i = getIntent();
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        final String Company = sharedPreferences.getString("CompanyID", "1") ;
-
-        ArrayList<ContactListItems> contactList = new ArrayList<ContactListItems>();
-        contactList.clear();
-        sqlHandler = new SqlHandler(this);
-        String query = "SELECT  distinct sid.itemNo,sid.OrgPrice ,sid.price, u.UnitName  ,sid.Tax_Amt ,   ( ifnull(sid.qty,0)) as qty,  invf.Item_Name  ,  sid.total    " +
-                "  FROM Sal_return_Det  sid  Left Join Unites u on u.Unitno =sid.unitNo " +
-                "Left Join invf on  invf.Item_No=sid.itemNo  where sid.Orderno =  '"+  i.getStringExtra("Orderno").toString()+"'";
-
-        Double Pro = 0.0 ;
-        Double Dis_Amt = 0.0 ;
-        Cursor c1 = sqlHandler.selectQuery(query);
-        if (c1 != null && c1.getCount() != 0) {
-            if (c1.moveToFirst()) {
-                do {
-                    ContactListItems contactListItems = new ContactListItems();
-
-                    contactListItems.setno(c1.getString(c1
-                            .getColumnIndex("itemNo")));
-                    contactListItems.setName(c1.getString(c1
-                            .getColumnIndex("Item_Name")));
-                    if (ShowTax.equals("0")) {
-                        contactListItems.setprice(c1.getString(c1
-                                .getColumnIndex("OrgPrice")));
-                    }else {
-                        contactListItems.setprice(c1.getString(c1
-                                .getColumnIndex("price")));
-
-                    }
-
-                    contactListItems.setQty(c1.getString(c1
-                            .getColumnIndex("qty")));
-                    contactListItems.setBounce(c1.getString(c1
-                            .getColumnIndex("bounce_qty")));
-                    contactListItems.setTax(c1.getString(c1
-                            .getColumnIndex("tax_Amt")));
-                    contactListItems.setUnite(c1.getString(c1
-                            .getColumnIndex("UnitName")));
-                    contactListItems.setTotal(c1.getString(c1
-                            .getColumnIndex("total")));
-
-                    contactListItems.setPro_dis_Per(c1.getString(c1
-                            .getColumnIndex("Pro_dis_Per")));
-
-
-                    Pro = Pro + (SToD(c1.getString(c1.getColumnIndex("Pro_dis_Per"))) / 100) * (SToD(c1.getString(c1.getColumnIndex("price"))) * SToD(c1.getString(c1.getColumnIndex("qty"))));
-                    Dis_Amt = Dis_Amt + SToD(c1.getString(c1.getColumnIndex("dis_Amt")));
-                    contactList.add(contactListItems);
-
-
-                } while (c1.moveToNext());
-
-
-            }
-
-
-
-            c1.close();
-        }
-
-
-        TextView textView125 =(TextView)findViewById(R.id.textView125);
-        TextView textView126 =(TextView)findViewById(R.id.textView126);
-        TextView textView196 =(TextView)findViewById(R.id.textView196);
-
-
-        TextView tv_Dis_Pro_amt =(TextView)findViewById(R.id.tv_Dis_Pro_amt);
-        tv_Dis_Pro_amt.setText(SToD(Pro.toString()) + "");
-
-        TextView tv_Dis_amt =(TextView)findViewById(R.id.tv_Dis_amt);
-        tv_Dis_amt.setText(SToD(Dis_Amt.toString()) + "");
-
-        if( SToD(tv_Dis_amt.getText().toString()) ==0.0 &&  SToD(tv_Dis_Pro_amt.getText().toString()) ==0.0 )
-        {
-            tv_Dis_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_amt.setHeight(0);
-            tv_Dis_Pro_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_Pro_amt.setHeight(0);
-
-            textView125.setVisibility(View.INVISIBLE);
-            textView125.setHeight(0);
-            textView126.setVisibility(View.INVISIBLE);
-            textView126.setHeight(0);
-            textView196.setVisibility(View.INVISIBLE);
-            textView196.setHeight(0);
-
-        }
-
-
-
-
-
-
-        LinearLayout Sal_ItemSLayout = (LinearLayout) findViewById(R.id.Sal_ItemSLayout);
-        LinearLayout Sal_ItemSLayout1 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout1);
-        LinearLayout Sal_ItemSLayout2 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout2);
-        LinearLayout Sal_ItemSLayout3 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout3);
-        LinearLayout Sal_ItemSLayout4 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout4);
-        LinearLayout Sal_ItemSLayout5 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout5);
-        LinearLayout Sal_ItemSLayout6 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout6);
-        LinearLayout Sal_ItemSLayout7 = (LinearLayout) findViewById(R.id.Sal_ItemSLayout7);
-
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view;
-
-        TextView tv_no;
-        TextView tv_name;
-        TextView tv_Price;
-        TextView tv_Qty;
-        TextView tv_Unit;
-        TextView tv_tax;
-        TextView tv_total;
-        TextView tv_bonce;
-
-
-
-        TextView tv_itemCount =(TextView)findViewById(R.id.tv_itemCount);
-        tv_itemCount.setText(contactList.size()+"");
-
-        int count = 0;
-
-        for (ContactListItems Obj : contactList){
-
-            view = inflater.inflate(R.layout.sal_invoce_row_tab_10, null);
-
-                /*if  (Company.equals("2")) {
-                    view = inflater.inflate(R.layout.sal_invoce_row_1, null);
-                }*/
-            tv_no = (TextView) view.findViewById(R.id.tv_no);
-            tv_name = (TextView) view.findViewById(R.id.tv_name);
-            tv_Qty = (TextView) view.findViewById(R.id.tv_Qty);
-            tv_Price = (TextView) view.findViewById(R.id.tv_Price2);
-            tv_Unit = (TextView) view.findViewById(R.id.tv_Unit);
-            tv_tax = (TextView) view.findViewById(R.id.tv_tax);
-            tv_total = (TextView) view.findViewById(R.id.tv_total);
-            tv_bonce = (TextView) view.findViewById(R.id.tv_bonce);
-
-
-
-
-            tv_no.setText(Obj.getno());
-            tv_name.setText(Obj.getName());
-            tv_Price.setText(Obj.getprice());
-            tv_Qty.setText(Obj.getQty());
-            tv_Unit.setText(Obj.getUnite() );
-            tv_tax.setText(Obj.getTax());
-            tv_total.setText(Obj.getTotal());
-            tv_tax.setText(Obj.getTax());
-            tv_bonce.setText(Obj.getBounce());
-            tv_tax.setVisibility(View.VISIBLE);
-            if (ShowTax.equals("0")) {
-                tv_tax.setText("");
-                tv_tax.setVisibility(View.INVISIBLE);
-
-            }
-
-            if( count < 10) {
-                Sal_ItemSLayout.addView(view);
-            }else if(count <20){
-                Sal_ItemSLayout1.addView(view);
-            }else if(count <30){
-                Sal_ItemSLayout2.addView(view);
-            }else if(count <40){
-                Sal_ItemSLayout3.addView(view);
-            }else if(count <50){
-                Sal_ItemSLayout4.addView(view);
-            }else if(count <60){
-                Sal_ItemSLayout5.addView(view);
-            }else if(count <70){
-                Sal_ItemSLayout6.addView(view);
-            }else if(count <80){
-                Sal_ItemSLayout7.addView(view);
-            }
-
-
-
-
-            count =count +1 ;
-        }
-
-
-
-        TextView textView130 = (TextView)findViewById(R.id.textView130);
-
-
-        ArrayList<Cls_Offers_Hdr> Offer_Header_List = new ArrayList<Cls_Offers_Hdr>();
-        Offer_Header_List.clear();
-        query = " Select  distinct  Offer_Name, Offer_Date, Offer_Type  from  Offers_Hdr  ";
-        c1 = sqlHandler.selectQuery(query);
-        textView130.setText("");
-        if (c1 != null && c1.getCount() != 0) {
-            textView130.setText("العروض");
-            if (c1.moveToFirst()) {
-                do {
-
-                    Cls_Offers_Hdr obj = new Cls_Offers_Hdr();
-
-                    obj.setOffer_Name(c1.getString(c1
-                            .getColumnIndex("Offer_Name")));
-                    obj.setOffer_Date(c1.getString(c1
-                            .getColumnIndex("Offer_Date")));
-                    obj.setOffer_Type(c1.getString(c1
-                            .getColumnIndex("Offer_Type")));
-                    Offer_Header_List.add(obj);
-
-                } while (c1.moveToNext());
-            }
-            c1.close();
-        }
-
-        LinearLayout Promotion_ItemSLayout = (LinearLayout) findViewById(R.id.Promotion_ItemSLayout);
-
-        LayoutInflater Promotion_inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View Promotion_view;
-
-
-
-        for (Cls_Offers_Hdr Obj : Offer_Header_List){
-
-            Promotion_view = Promotion_inflater.inflate(R.layout.sal_inv_pro_row ,null);
-            tv_name = (TextView) Promotion_view.findViewById(R.id.tv_name);
-
-            tv_name.setText(Obj.getOffer_Name());
-
-            Promotion_ItemSLayout.addView(Promotion_view);
-        }
-
-
-        FillCustomerMsg();
-
-    }
-    private  Double SToD(String str){
-        String f = "";
-        final NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-        final DecimalFormat df = (DecimalFormat)nf;
-        str = str.replace(",","");
-        Double d = 0.0;
-        if (str.length()==0) {
-            str = "0";
-        }
-        if (str.length()>0)
-            try {
-                d =  Double.parseDouble(str);
-                str = df.format(d).replace(",", "");
-
-            }
-            catch (Exception ex)
-            {
-                str="0";
-            }
-
-        df.setParseBigDecimal(true);
-
-        d = Double.valueOf(str.trim()).doubleValue();
-
-        return d;
-    }
-    private void showList1(String OrderNo) {
-        Intent i = getIntent();
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        final String Company = sharedPreferences.getString("CompanyID", "1") ;
-
-        ArrayList<ContactListItems> contactList = new ArrayList<ContactListItems>();
-        contactList.clear();
-        sqlHandler = new SqlHandler(this);
-        String query = "SELECT  distinct sid.itemNo,sid.OrgPrice ,sid.price,sid.tax,u.UnitName  , sid.tax_Amt,  ( ifnull(sid.qty,0) +  ifnull(sid.Pro_bounce,0) + ifnull(bounce_qty,0) )  as qty  ,invf.Item_Name  ,  sid.total    " +
-                " , ifnull(sid.Pro_dis_Per,0) as Pro_dis_Per ,ifnull(sid.dis_Amt,0) as dis_Amt     FROM Sal_invoice_Det   sid    Left Join Unites u on u.Unitno =sid.unitNo " +
-                "Left Join invf on   invf.Item_No=sid.itemNo  where sid.OrderNo =  '"+  i.getStringExtra("OrderNo").toString()+"'";
-
-        Double Pro = 0.0 ;
-        Double Dis_Amt = 0.0 ;
-        Cursor c1 = sqlHandler.selectQuery(query);
-        if (c1 != null && c1.getCount() != 0) {
-            if (c1.moveToFirst()) {
-                do {
-                    ContactListItems contactListItems = new ContactListItems();
-
-                    contactListItems.setno(c1.getString(c1
-                            .getColumnIndex("itemNo")));
-                    contactListItems.setName(c1.getString(c1
-                            .getColumnIndex("Item_Name")));
-                    if (ShowTax.equals("0")) {
-                        contactListItems.setprice(c1.getString(c1
-                                .getColumnIndex("OrgPrice")));
-                    }else {
-                        contactListItems.setprice(c1.getString(c1
-                                .getColumnIndex("price")));
-
-                    }
-
-                    contactListItems.setQty(c1.getString(c1
-                            .getColumnIndex("qty")));
-                    contactListItems.setTax(c1.getString(c1
-                            .getColumnIndex("tax_Amt")));
-                    contactListItems.setUnite(c1.getString(c1
-                            .getColumnIndex("UnitName")));
-                    contactListItems.setTotal(c1.getString(c1
-                            .getColumnIndex("total")));
-
-                    contactListItems.setPro_dis_Per(c1.getString(c1
-                            .getColumnIndex("Pro_dis_Per")));
-
-
-                    Pro = Pro + (SToD(c1.getString(c1.getColumnIndex("Pro_dis_Per"))) / 100) * (SToD(c1.getString(c1.getColumnIndex("price"))) * SToD(c1.getString(c1.getColumnIndex("qty"))));
-                    Dis_Amt = Dis_Amt + SToD(c1.getString(c1.getColumnIndex("dis_Amt")));
-                    contactList.add(contactListItems);
-
-
-                } while (c1.moveToNext());
-
-
-            }
-
-
-
-            c1.close();
-        }
-
-
-        TextView textView125 =(TextView)findViewById(R.id.textView125);
-        TextView textView126 =(TextView)findViewById(R.id.textView126);
-        TextView textView196 =(TextView)findViewById(R.id.textView196);
-
-
-        TextView tv_Dis_Pro_amt =(TextView)findViewById(R.id.tv_Dis_Pro_amt);
-        tv_Dis_Pro_amt.setText(SToD(Pro.toString()) + "");
-
-        TextView tv_Dis_amt =(TextView)findViewById(R.id.tv_Dis_amt);
-        tv_Dis_amt.setText(SToD(Dis_Amt.toString()) + "");
-
-        if( SToD(tv_Dis_amt.getText().toString()) ==0.0 &&  SToD(tv_Dis_Pro_amt.getText().toString()) ==0.0 )
-        {
-            tv_Dis_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_amt.setHeight(0);
-            tv_Dis_Pro_amt.setVisibility(View.INVISIBLE);
-            tv_Dis_Pro_amt.setHeight(0);
-
-            textView125.setVisibility(View.INVISIBLE);
-            textView125.setHeight(0);
-            textView126.setVisibility(View.INVISIBLE);
-            textView126.setHeight(0);
-            textView196.setVisibility(View.INVISIBLE);
-            textView196.setHeight(0);
-
-        }
-
-
-
-
-
-
-        LinearLayout Sal_ItemSLayout = (LinearLayout) findViewById(R.id.Sal_ItemSLayout);
-
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view;
-
-        TextView tv_no;
-        TextView tv_name;
-        TextView tv_Price;
-        TextView tv_Qty;
-        TextView tv_Unit;
-        TextView tv_tax;
-        TextView tv_total;
-
-
-
-        TextView tv_itemCount =(TextView)findViewById(R.id.tv_itemCount);
-        tv_itemCount.setText(contactList.size()+"");
-        for (ContactListItems Obj : contactList){
-
-            view = inflater.inflate(R.layout.sal_invoce_row_x, null);
-
-                /*if  (Company.equals("2")) {
-                    view = inflater.inflate(R.layout.sal_invoce_row_1, null);
-                }*/
-            tv_no = (TextView) view.findViewById(R.id.tv_no);
-            tv_name = (TextView) view.findViewById(R.id.tv_name);
-            tv_Qty = (TextView) view.findViewById(R.id.tv_Qty);
-            tv_Price = (TextView) view.findViewById(R.id.tv_Price);
-            tv_Unit = (TextView) view.findViewById(R.id.tv_Unit);
-            tv_tax = (TextView) view.findViewById(R.id.tv_tax);
-            tv_total = (TextView) view.findViewById(R.id.tv_total);
-
-
-
-
-            tv_no.setText(Obj.getno());
-            tv_name.setText(Obj.getName());
-            tv_Price.setText(Obj.getprice());
-            tv_Qty.setText(Obj.getQty());
-            tv_Unit.setText(Obj.getUnite() );
-            tv_tax.setText(Obj.getTax());
-            tv_total.setText(Obj.getTotal());
-            tv_tax.setText(Obj.getTax());
-            tv_tax.setVisibility(View.VISIBLE);
-            if (ShowTax.equals("0")) {
-                tv_tax.setText("");
-                tv_tax.setVisibility(View.INVISIBLE);
-
-            }
-            Sal_ItemSLayout.addView(view);
-
-        }
-
-
-
-        TextView textView130 = (TextView)findViewById(R.id.textView130);
-
-
-        ArrayList<Cls_Offers_Hdr> Offer_Header_List = new ArrayList<Cls_Offers_Hdr>();
-        Offer_Header_List.clear();
-        query = " Select  distinct  Offer_Name, Offer_Date, Offer_Type  from  Offers_Hdr  ";
-        c1 = sqlHandler.selectQuery(query);
-        textView130.setText("");
-        if (c1 != null && c1.getCount() != 0) {
-            textView130.setText("العروض");
-            if (c1.moveToFirst()) {
-                do {
-
-                    Cls_Offers_Hdr obj = new Cls_Offers_Hdr();
-
-                    obj.setOffer_Name(c1.getString(c1
-                            .getColumnIndex("Offer_Name")));
-                    obj.setOffer_Date(c1.getString(c1
-                            .getColumnIndex("Offer_Date")));
-                    obj.setOffer_Type(c1.getString(c1
-                            .getColumnIndex("Offer_Type")));
-                    Offer_Header_List.add(obj);
-
-                } while (c1.moveToNext());
-            }
-            c1.close();
-        }
-
-        LinearLayout Promotion_ItemSLayout = (LinearLayout) findViewById(R.id.Promotion_ItemSLayout);
-
-        LayoutInflater Promotion_inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View Promotion_view;
-
-
-
-        for (Cls_Offers_Hdr Obj : Offer_Header_List){
-
-            Promotion_view = Promotion_inflater.inflate(R.layout.sal_inv_pro_row ,null);
-            tv_name = (TextView) Promotion_view.findViewById(R.id.tv_name);
-
-            tv_name.setText(Obj.getOffer_Name());
-
-            Promotion_ItemSLayout.addView(Promotion_view);
-        }
-
-
-        FillCustomerMsg();
 
     }
     /*  private void showList(String OrderNo) {
@@ -1598,94 +1089,10 @@ public class Xpinter_Acc  extends FragmentActivity {
         FillCustomerMsg();
 
     }*/
-    private  void FillCustomerMsg(){
-        String q ;
-        q = " Select  distinct    msg   from  CustomersMsg Where SaleManFlg ='4' ";// Where  SaleManFlg =4 Cusno = '' ";
-        Cursor c1 = sqlHandler.selectQuery(q);
-        ArrayList<Cls_InvoiceMsg> MsgList = new ArrayList<Cls_InvoiceMsg>();
-        MsgList.clear();
-        if (c1 != null && c1.getCount() != 0) {
 
-            if (c1.moveToFirst()) {
-                do {
-                    Cls_InvoiceMsg obj = new Cls_InvoiceMsg();
-                    obj.setMsg(c1.getString(c1
-                            .getColumnIndex("msg")));
-                    MsgList.add(obj);
-                } while (c1.moveToNext());
-            }
-            c1.close();
-        }
-
-        LinearLayout  MsgLayout = (LinearLayout) findViewById(R.id.MsgLayout);
-
-        LayoutInflater Msg_inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View  Msg_view;
-        TextView tv_Msg;
-        for (Cls_InvoiceMsg Obj : MsgList){
-            try {
-                Msg_view = Msg_inflater.inflate(R.layout.msg_row_new, null);
-                tv_Msg = (TextView) Msg_view.findViewById(R.id.tv_Msg);
-                tv_Msg.setText(Obj.getMsg());
-                MsgLayout.addView(Msg_view);
-            }catch ( Exception ex   ){}
-        }
-
-    }
 
     ///////////////////////////////////////////////////////////////////////
-    private void connetBle(){
-        try {
 
-            if (BPrinter_MAC_ID.equals(null) || BPrinter_MAC_ID.equals("")) {
-                showSnackbar(getString(R.string.bleselect));
-            } else {
-                binder.connectBtPort(BPrinter_MAC_ID, new UiExecute() {
-                    @Override
-                    public void onsucess() {
-                        ISCONNECT = true;
-
-                 BTCon.setText("طباعة ");
-                        CallPrint();
-                        binder.write(DataForSendToPrinterPos80.openOrCloseAutoReturnPrintState(0x1f), new UiExecute() {
-                            @Override
-                            public void onsucess() {
-                                binder.acceptdatafromprinter(new UiExecute() {
-                                    @Override
-                                    public void onsucess() {
-
-                                    }
-
-                                    @Override
-                                    public void onfailed() {
-                                        ISCONNECT = false;
-                                        showSnackbar(getString(R.string.con_has_discon));
-                                    }
-                                });
-                            }
-
-                            @Override
-                            public void onfailed() {
-
-                            }
-                        });
-
-
-                    }
-
-                    @Override
-                    public void onfailed() {
-
-                        ISCONNECT = false;
-                        showSnackbar(getString(R.string.con_failed));
-                    }
-                });
-            }
-
-        }catch (Exception ex){
-            Toast.makeText(this,ex.getMessage().toString(),Toast.LENGTH_SHORT).show();
-        }
-    }
     private class Receiver extends BroadcastReceiver {
 
         @Override
@@ -2138,4 +1545,87 @@ public class Xpinter_Acc  extends FragmentActivity {
             Toast.makeText(getBaseContext(), "Sharing tools have not been installed.", Toast.LENGTH_SHORT).show();
         }
     }
+
+    private void createPdf() {
+
+
+        Toast.makeText(this, "PRINTING ... " , Toast.LENGTH_LONG).show();
+
+        WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        float hight = displaymetrics.heightPixels;
+        float width = displaymetrics.widthPixels;
+
+        int convertHighet = (int) hight
+                , convertWidth = (int) width;
+
+        LinearLayout lay = (LinearLayout) findViewById(R.id.Mainlayout);
+
+
+
+        ReportView = lay;
+        Bitmap bitmap = loadBitmapFromView(ReportView);
+
+        PdfDocument document = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+
+        Canvas canvas = page.getCanvas();
+
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffffff"));
+        canvas.drawPaint(paint);
+
+
+        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth(), bitmap.getHeight(), true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        document.finishPage(page);
+
+
+        // write the document content
+        // String targetPdf = "/sdcard/test.pdf";
+        String folder_main = "/Android/Cv_Images/SalInv_Sig" +
+                getIntent().getStringExtra("OrderNo") + "PP.pdf";
+        File filePath = new File(Environment.getExternalStorageDirectory(), folder_main);
+
+        // File filePath = new File(targetPdf);
+        try {
+            document.writeTo(new FileOutputStream(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Something wrong: " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        // close the document
+        document.close();
+        // OpenPDFFile3();
+
+
+        File file = filePath;
+        String extension = MimeTypeMap.getFileExtensionFromUrl(Uri.fromFile(file).toString());
+
+        String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_NEW_TASK);
+
+        Uri uri = FileProvider.getUriForFile(Xpinter_Acc.this, getPackageName() + ".provider", file);
+
+        intent.setDataAndType(uri, mimeType);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        startActivity(Intent.createChooser(intent, "choseFile"));
+
+
+
+
+    }
+
 }

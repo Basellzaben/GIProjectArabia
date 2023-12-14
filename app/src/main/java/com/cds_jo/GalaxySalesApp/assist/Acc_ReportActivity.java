@@ -217,7 +217,7 @@ public class Acc_ReportActivity extends AppCompatActivity {
 
         return new String(chars);
     }
-    public void onProgressUpdate( ){
+    public void onProgressUpdate(){
 
 
 
@@ -250,7 +250,7 @@ public class Acc_ReportActivity extends AppCompatActivity {
         }
 
 
-        AlertDialog alertDialog  ;
+        AlertDialog alertDialog ;
         alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle("تاريخ بداية الفترة");
         alertDialog.setMessage( "هناك خطأ في طريقة ادخال بداية الفترة ، الرجاء ادخال التاريخ كالتالي dd/mm/yyyy");
@@ -318,7 +318,8 @@ public class Acc_ReportActivity extends AppCompatActivity {
             public void run() {
 
                 CallWebServices ws = new CallWebServices(Acc_ReportActivity.this);
-               ws.CallReport(acc.getText().toString(), FromDate.getText().toString(),ToDate.getText().toString(),UserID);
+               ws.CallReport(acc.getText().toString(), FromDate.getText().toString(),
+                       ToDate.getText().toString(),UserID);
 
 
                 try {
@@ -448,7 +449,7 @@ public class Acc_ReportActivity extends AppCompatActivity {
 
                             Cls_Acc_Report cls_acc_report1 = new Cls_Acc_Report();
                             cls_acc_report1 = new Cls_Acc_Report();
-                            cls_acc_report1.setDate("عدد الحركات");
+                            cls_acc_report1.setDate("");
                             cls_acc_report1.setCur_no((cls_acc_reportsList.size()-1)+"");
                             cls_acc_report1.setDoctype("");
                             cls_acc_report1.setDoc_num("");
@@ -554,21 +555,23 @@ public class Acc_ReportActivity extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
         String currentDateandTime = sdf.format(new Date());
 
+
+
         Long i;
         ContentValues cv = new ContentValues();
         for (int x = 0; x < cls_acc_reportsList.size(); x++) {
             Cls_Acc_Report contactListItems = new Cls_Acc_Report();
             contactListItems = cls_acc_reportsList.get(x);
 
-
             cv = new ContentValues();
-
 
             cv.put("Cust_No", tv_acc.getText().toString());
             cv.put("Cust_Nm", tv_cusnm.getText().toString());
             cv.put("FDate", ed_FromDate.getText().toString());
             cv.put("TDate", ed_ToDate.getText().toString());
             cv.put("TrDate", currentDateandTime);
+
+
             cv.put("Tot", contactListItems.getTot().toString().replace(",", ""));
             cv.put("Rate", contactListItems.getRate().toString().replace(",", ""));
             cv.put("Cred", contactListItems.getCred().toString().replace(",", ""));
@@ -586,12 +589,12 @@ public class Acc_ReportActivity extends AppCompatActivity {
             cv.put("Notes", "");
             i = sqlHandler.Insert("ACC_REPORT", null, cv);
         }Intent k;
-        if (ComInfo.ComNo == Companies.nwaah.getValue()) {
+      //  if (ComInfo.ComNo == Companies.nwaah.getValue()) {
               k = new Intent(this,Xpinter_Acc.class);
-        }
-        else {
-             k = new Intent(this, Convert_ccReportTo_ImgActivity.class);
-        }
+      //  }
+     //   else {
+       //      k = new Intent(this, Convert_ccReportTo_ImgActivity.class);
+    //    }
 
         k.putExtra("Scr", "po");
         TextView   CustNm =(TextView)findViewById(R.id.tv_cusnm);

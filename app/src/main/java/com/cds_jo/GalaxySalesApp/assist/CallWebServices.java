@@ -113,7 +113,7 @@ public class CallWebServices  {
 
 
        // URL = "http://10.0.1.120:3210/CV.asmx"; // khaldi test
-        URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
+      //  URL = "http://10.0.1.50:9767/CV.asmx";  //لوكل تست الماسيه*9+
 
  // URL = "http://192.168.100.121:9767/CV.asmx";
 
@@ -123,19 +123,18 @@ public class CallWebServices  {
 
 
 
-  //  URL = "http://10.0.1.60:6325/CV.asmx";//ماسية-نواه تيست سيرفر
+  URL = "http://10.0.1.60:6325/CV.asmx";//ماسية-نواه تيست سيرفر
 
 
     // URL = "http://149.200.252.6:3750/CV.asmx";//massiah initial
 
 
 
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
-        //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
+  URL = "http://46.185.131.143:3756/CV.asmx";//arabia orbia
+
+
+   //  URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
+
 
     }
     public void GetItem_D(String Item_no, int flag) {
@@ -2734,13 +2733,13 @@ public class CallWebServices  {
         We_Result.ID =-1;
         SoapObject request ;
         if (ComInfo.ComNo== Companies.Afrah.getValue()) {
-            request = new SoapObject(NAMESPACE, "GetAccReportT");
+          request = new SoapObject(NAMESPACE, "GetAccReportT");
 
-        }
-        else
-        {
+       }
+       else
+       {
             request = new SoapObject(NAMESPACE, "GetAccReport");
-        }
+     }
 
 
         PropertyInfo parm_AccNo = new PropertyInfo();

@@ -1671,7 +1671,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
                 "   Post <=0  AND   DocNo ='" + OrdeNo.getText().toString().replaceAll("[^\\d.]", "") + "'";
 
         Cursor c2 = sql_Handler.selectQuery(q3);
-   /*     if (c2 != null && c2.getCount() != 0) {
+      if (c2 != null && c2.getCount() != 0) {
             new SweetAlertDialog(RecvVoucherActivity.this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("سند القبض")
                     .setContentText("لا يمكن الطباعة الا بعد الاعتماد")
@@ -1680,7 +1680,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
 
             c2.close();
             return;
-        }*/
+        }
         InsertLogTrans obj = new InsertLogTrans(RecvVoucherActivity.this, SCR_NO, SCR_ACTIONS.Print.getValue(), et_OrdeNo.getText().toString(), tv_acc.getText().toString(), "", "0");
 
         Intent k = new Intent(this, Convert_RecVouch_To_Img.class);
@@ -1697,21 +1697,6 @@ public class RecvVoucherActivity extends AppCompatActivity {
             IsNew = true;
         }
 
-
-    /*    if (IsNew == true) {
-            AlertDialog alertDialog = new AlertDialog.Builder(
-                    this).create();
-            alertDialog.setTitle("سند قبض");
-            alertDialog.setMessage("يجب تخزين سند القبض اولاَ");
-            alertDialog.setIcon(R.drawable.delete);
-            alertDialog.setButton("موافق", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    return;
-                }
-            });
-            alertDialog.show();
-            return;
-        }*/
 
 
             k = new Intent(this, Convert_RecVouch_To_Img.class);

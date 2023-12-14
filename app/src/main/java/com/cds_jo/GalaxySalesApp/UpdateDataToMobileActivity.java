@@ -4792,7 +4792,7 @@ public class UpdateDataToMobileActivity extends AppCompatActivity {
                             JSONArray Chqceling = js.getJSONArray("Chqceling");
                             JSONArray BB_bill = js.getJSONArray("BB");
                             JSONArray BB_Chaq = js.getJSONArray("BB_Chaq");
-                            JSONArray BB_flag = js.getJSONArray("Flag");
+                            //JSONArray BB_flag = js.getJSONArray("Flag");
 
 
                             q = "Delete from Customers";
@@ -4803,7 +4803,7 @@ public class UpdateDataToMobileActivity extends AppCompatActivity {
                             for (i = 0; i < js_no.length(); i++) {
                                 q = "Insert INTO Customers(Tax_Status,no,name,Ename,barCode,Address,State,SMan,Latitude,Longitude,Note2,sat " +
                                         " ,sun,mon,tues,wens,thurs,sat1,sun1,mon1,tues1,wens1,thurs1 , Celing , CatNo " +
-                                        ",CustType,PAMENT_PERIOD_NO , CUST_PRV_MONTH,CUST_NET_BAL,Pay_How,Cust_type,LocationNo,Location,CheckAlowedDay,PromotionFlag,CloseVisitWithoutimg,BB_Chaq,BB_bill,Chqceling,flag) values ('"
+                                        ",CustType,PAMENT_PERIOD_NO , CUST_PRV_MONTH,CUST_NET_BAL,Pay_How,Cust_type,LocationNo,Location,CheckAlowedDay,PromotionFlag,CloseVisitWithoutimg,BB_Chaq,BB_bill,Chqceling) values ('"
                                         + js_TaxStatus.get(i).toString()
                                         + "','" + js_no.get(i).toString()
                                         + "','" + js_name.get(i).toString()
@@ -4844,7 +4844,7 @@ public class UpdateDataToMobileActivity extends AppCompatActivity {
                                         + "','" + BB_Chaq.get(i).toString()
                                         + "','" + BB_bill.get(i).toString()
                                         + "','" + Chqceling.get(i).toString()
-                                        + "','" + BB_flag.get(i).toString()
+                                      //  + "','" + BB_flag.get(i).toString()
 
 
 
