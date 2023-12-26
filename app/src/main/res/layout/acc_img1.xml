@@ -8,6 +8,7 @@
         android:id="@+id/Mainlayout"
         android:orientation="vertical"
         android:layout_width="700dp"
+        android:paddingEnd="30dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:background="#FFFFFF">
@@ -25,13 +26,13 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="1dp"
                 android:layout_gravity="center"
                 android:gravity="center">
 
                 <ImageView
                     android:layout_width="200dp"
-                    android:layout_height="60dp"
+                    android:layout_height="1dp"
                     android:id="@+id/img_Logo"
                     android:visibility="invisible"
                     android:src="@drawable/asw"
@@ -47,7 +48,7 @@
 
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="مجموعة المجرة الدولية"
                     android:id="@+id/tv_CompName"
@@ -402,7 +403,7 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="550dp">
 
                 <LinearLayout
                     android:orientation="vertical"

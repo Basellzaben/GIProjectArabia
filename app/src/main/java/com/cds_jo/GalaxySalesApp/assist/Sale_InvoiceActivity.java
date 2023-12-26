@@ -4563,7 +4563,14 @@ try {
         } else {
             k = new Intent(this, Convert_Sal_Invoice_To_ImgActivity.class);
         }
+
+
+
+
         k = new Intent(this, Convert_Sal_Invoice_To_ImgActivity.class);
+
+
+
         k.putExtra("OrderNo", OrdeNo.getText().toString().replace("\u202c", "").replace("\u202d", ""));
         if (chk_showTax.isChecked()) {
             k.putExtra("ShowTax", "1");

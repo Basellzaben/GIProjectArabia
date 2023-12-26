@@ -1,19 +1,18 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:fillViewport="true"
     android:layoutDirection="rtl">
 
     <LinearLayout
         android:id="@+id/Mainlayout"
         android:layout_width="700dp"
         android:padding="20dp"
-android:paddingEnd="40dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:paddingEnd="40dp"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:layoutDirection="rtl"
         android:orientation="vertical">
+
 
 
 
@@ -28,7 +27,7 @@ android:paddingEnd="40dp"
             <ImageView
                 android:id="@+id/img_Logo"
                 android:layout_width="270dp"
-                android:layout_height="115dp"
+                android:layout_height="1dp"
                 android:scaleType="fitXY"
                 android:src="@mipmap/diomnlogo" />
         </LinearLayout>
@@ -536,7 +535,7 @@ android:paddingEnd="40dp"
                     <ImageView
                         android:id="@+id/imgSig"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="300dp"
                         android:layout_weight="1"
                         android:scaleType="fitXY" />
 
