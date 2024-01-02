@@ -323,22 +323,22 @@ public class Select_Customer extends DialogFragment implements View.OnClickListe
         if (t.toString().equals("")){
            if (ComInfo.ComNo != Companies.diamond.getValue() &&  ComInfo.ComNo != Companies.nwaah.getValue() ) {
                 query = "   Select DISTINCT  no,name,Ename ,Address , Note2 ,'' as Mobile  ,ifnull(Latitude,0) as Latitude   , ifnull(Longitude,0) as Longitude" +
-                        "   ,ifnull(barCode,-1)  as barCode  from Customers where  " + q+ " and flag = 1";
+                        "   ,ifnull(barCode,-1)  as barCode  from Customers where  " + q+ " ";
             }else
             {
                 query = "   Select  DISTINCT no,name,Ename ,Address , Note2 ,'' as Mobile  ,ifnull(Latitude,0) as Latitude   , ifnull(Longitude,0) as Longitude" +
-                        "   ,ifnull(barCode,-1)  as barCode ,IDN  from Customers_Man where  " + q +  " and flag = 1";
+                        "   ,ifnull(barCode,-1)  as barCode ,IDN  from Customers_Man where  " + q +  " ";
             }
         }
         else {
             if (ComInfo.ComNo != Companies.diamond.getValue() &&  ComInfo.ComNo != Companies.nwaah.getValue()) {
                 query = "   Select DISTINCT  no,name ,Ename,Address , Note2 ,'' as Mobile  ,ifnull(Latitude,0) as Latitude   , ifnull(Longitude,0) as Longitude " +
-                        ",ifnull(barCode,-1)  as barCode from Customers where "+q+" and (name like '%" + t + "%' or  no like '%" + t + "%')  and flag = 1 ";
+                        ",ifnull(barCode,-1)  as barCode from Customers where "+q+" and (name like '%" + t + "%' or  no like '%" + t + "%')   ";
             }
             else
             {
                 query = "   Select  DISTINCT no,name ,Ename,Address , Note2 ,'' as Mobile  ,ifnull(Latitude,0) as Latitude   , ifnull(Longitude,0) as Longitude " +
-                        ",ifnull(barCode,-1)  as barCode ,IDN from Customers_Man where "+q+" and (name like '%" + t + "%' or  no like '%" + t + "%')   and flag = 1";
+                        ",ifnull(barCode,-1)  as barCode ,IDN from Customers_Man where "+q+" and (name like '%" + t + "%' or  no like '%" + t + "%')  ";
 
             }
 

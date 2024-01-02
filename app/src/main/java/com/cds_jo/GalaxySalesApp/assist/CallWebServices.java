@@ -130,10 +130,10 @@ public class CallWebServices  {
 
 
 
- // URL = "http://46.185.131.143:3756/CV.asmx";//arabia orbia
+ URL = "http://46.185.131.143:3756/CV.asmx";//arabia orbia
 
 
-   URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
+  // URL = "http://92.253.103.165:3751/CV.asmx"; //nwwah initial
 
 
     }
