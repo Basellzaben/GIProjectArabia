@@ -497,7 +497,7 @@ public class RecvVoucherActivity extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
         String currentDateandTime = sdf.format(new Date());
 
-
+        UpDateMaxOrderNo();
         TrDate = (TextView) findViewById(R.id.et_Date);
         TrDate.setText(currentDateandTime);
 

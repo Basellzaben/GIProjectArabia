@@ -91,13 +91,13 @@ public class RecVoucherSearchActivity  extends DialogFragment implements View.On
         String q;
         String sad;
         if(s.toString().equals("")) {
-             q = "Select distinct DocNo,TrDate,Amnt,RecVoucher.IDN,Desc, COALESCE(RecVoucher.Post, -1)  as Post from RecVoucher inner join Customers_man  on Customers_man.barCode =RecVoucher.CustAcc" +
+             q = "Select distinct Customers.name as name,DocNo,TrDate,Amnt,RecVoucher.IDN,Desc, COALESCE(RecVoucher.Post, -1)  as Post from RecVoucher inner join Customers  on Customers.no =RecVoucher.CustAcc" +
                     " where FromSales = '0' and RecVoucher.UserID ='" + u.toString().replaceAll("[^\\d.]", "") + "'";
         }
         else
         {
-             q = "Select distinct DocNo,TrDate,Amnt,RecVoucher.IDN,Desc, COALESCE(RecVoucher.Post, -1)  as Post from RecVoucher inner join Customers_man  on Customers_man.barCode =RecVoucher.CustAcc" +
-                    " where FromSales = '0' and RecVoucher.UserID ='" + u.toString().replaceAll("[^\\d.]", "") + "' And Customers_man.name like  '%" + s.toString() + "%'";
+             q = "Select distinct Customers.name as name,DocNo,TrDate,Amnt,RecVoucher.IDN,Desc, COALESCE(RecVoucher.Post, -1)  as Post from RecVoucher inner join Customers  on Customers.no =RecVoucher.CustAcc" +
+                    " where FromSales = '0' and RecVoucher.UserID ='" + u.toString().replaceAll("[^\\d.]", "") + "' And Customers.name like  '%" + s.toString() + "%'";
 
         }
         SqlHandler sqlHandler = new SqlHandler(getActivity());
@@ -111,9 +111,9 @@ public class RecVoucherSearchActivity  extends DialogFragment implements View.On
                     cls_searchRecVou.setDocNo(c1.getString(c1.getColumnIndex("DocNo")));
                     cls_searchRecVou.setDate(c1.getString(c1.getColumnIndex("TrDate")));
                     cls_searchRecVou.setAmt(c1.getString(c1.getColumnIndex("Amnt")));
-                  //  cls_searchRecVou.setAcc(c1.getString(c1.getColumnIndex("name")));
-                     sad = DB.GetValue(getActivity(), "Customers_man","name", "IDN='" + c1.getString(c1.getColumnIndex("IDN")) + "'");
-                    cls_searchRecVou.setAcc(sad);
+                    cls_searchRecVou.setAcc(c1.getString(c1.getColumnIndex("name")));
+                   //  sad = DB.GetValue(getActivity(), "Customers_man","name", "IDN='" + c1.getString(c1.getColumnIndex("IDN")) + "'");
+                  //  cls_searchRecVou.setAcc(sad);
                     cls_searchRecVou.setNotes(c1.getString(c1.getColumnIndex("Desc")));
                     cls_searchRecVou.setPost(c1.getString(c1.getColumnIndex("Post")));
 
