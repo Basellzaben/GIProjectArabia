@@ -458,6 +458,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:checked="false"
+                    android:enabled="false"
                     android:text="نقدي"
                     android:textSize="15dp"/>
 
@@ -475,6 +476,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:checked="false"
                     android:paddingLeft="10dp"
                     android:text="إيقاف العرض"

@@ -1701,7 +1701,7 @@ if(WeekNum=="0"){
                 Cursor c1 = sql_Handler.selectQuery(query);
                 if (c1 != null && c1.getCount() != 0) {
                     if (c1.moveToFirst()) {
-                        Toast.makeText(MainActivity.this, c1.getString(c1.getColumnIndex("ActionNo")), Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(MainActivity.this, c1.getString(c1.getColumnIndex("ActionNo")), Toast.LENGTH_LONG).show();
                         if (ArrayAtts.get(0) != 2) {
                        // if (2== 2) {
 
@@ -1712,10 +1712,10 @@ if(WeekNum=="0"){
                                 CustNo.requestFocus();
                                 return;
                             }
-                            if (tv_x.getText().toString().equals("") || tv_y.getText().toString().equals("")) {
+                         /*   if (tv_x.getText().toString().equals("") || tv_y.getText().toString().equals("")) {
                                 Toast.makeText(MainActivity.this, String.valueOf(getResources().getString(R.string.PerLocation)), Toast.LENGTH_LONG).show();
                                 return;
-                            }
+                            }*/
                             Location startPoint = new Location("locationA");
                             startPoint.setLatitude(Double.parseDouble(tv_x.getText().toString()));
                             startPoint.setLongitude(Double.parseDouble(tv_y.getText().toString()));
@@ -1731,7 +1731,7 @@ if(WeekNum=="0"){
                                 Cust_y = "0";
                             }
                             //mohsss
-                            else if (ComInfo.ComNo != Companies.Afrah.getValue()) {
+                          /*  else if (ComInfo.ComNo != Companies.Afrah.getValue()) {
                                 Location endPoint = new Location("locationA");
                                 endPoint.setLatitude(Double.parseDouble(Cust_x));
                                 endPoint.setLongitude(Double.parseDouble(Cust_y));
@@ -1742,7 +1742,7 @@ if(WeekNum=="0"){
                                         Toast.makeText(MainActivity.this, String.valueOf(getResources().getString(R.string.notopenvivit)), Toast.LENGTH_LONG).show();
                                         return;
                                     }
-                            }
+                            }*/
                             OrderNo = GetMaxPONo();
                             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
                             sqlHandler = new SqlHandler(this);
@@ -1880,7 +1880,7 @@ if(WeekNum=="0"){
 
             }
         }catch(Exception exception){
-            Toast.makeText(MainActivity.this, exception.getMessage()+"س", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, exception.getMessage()+exception.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
