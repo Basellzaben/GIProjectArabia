@@ -750,10 +750,11 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#fff"
                             android:textSize="18sp" />
+
                         <Methdes.MyTextView
                             android:id="@+id/tv_Amnt5"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="33dp"
                             android:layout_gravity="center"
                             android:layout_marginRight="0.5dp"
                             android:layout_weight="1"
